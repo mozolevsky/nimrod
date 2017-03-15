@@ -2,7 +2,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync'),
     concat = require('gulp-concat'),
-    uglify = require('gulp-uglifyjs'),
+    uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     cssnano = require('gulp-cssnano'),
     del = require('del'),
@@ -13,11 +13,9 @@ var gulp = require('gulp'),
     rigger = require('gulp-rigger');
 
 gulp.task('sass', function(){
-    return gulp.src('app/sass/main.sass')
+    return gulp.src('app/sass/main.scss')
         .pipe(sass())
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        .pipe(cssnano())
-        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.reload({stream: true}))
 });
@@ -38,8 +36,16 @@ gulp.task('scripts', function () {
         .pipe(gulp.dest('app/js'))
 });
 
-gulp.task('cssLibMin',  function () {
-    return gulp.src('app/libs/normalize-css/normalize.css')
+gulp.task('libsCssMin',  function () {
+    return gulp.src([
+        'app/libs/normalize-css/normalize.css'])
+        .pipe(cssnano())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('app/css'))
+});
+
+gulp.task('cssMin',  function () {
+    return gulp.src('app/sass/main.css')
         .pipe(cssnano())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('app/css'))
@@ -51,8 +57,8 @@ gulp.task('rigger', function () {
         .pipe(gulp.dest('app/'))
 });
 
-gulp.task('watch', ['browser-sync', 'sass', 'cssLibMin', 'scripts'], function () {
-    gulp.watch('app/sass/**/*.sass', ['sass']);
+gulp.task('watch', ['browser-sync', 'sass', 'scripts'], function () {
+    gulp.watch('app/sass/**/*.scss', ['sass']);
     gulp.watch('app/*.html', browserSync.reload);
     gulp.watch('app/js/**/*.js', browserSync.reload);
 });
@@ -78,7 +84,7 @@ gulp.task('img', function () {
         .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('build', ['clean', 'img' , 'sass', 'cssLibMin', 'scripts'], function (){
+gulp.task('build', ['clean', 'img' , 'sass', 'cssMin', 'scripts'], function (){
     var buildCss = gulp.src('app/css/**/*.css')
         .pipe(gulp.dest('dist/css'));
 
