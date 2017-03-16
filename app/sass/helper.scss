@@ -24,3 +24,10 @@ $yellowish-orange: #feab1c;
   color: $color;
 }
 
+.block__title {
+  @include brandonFont(700, 16px, #ffffff);
+  margin-bottom: 20px;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+
