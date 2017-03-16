@@ -1,0 +1,94 @@
+
+header {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.32));
+}
+
+.logo-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-section__link {
+  @include brandonFont(500, 12px);
+  opacity: 0.5;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  padding: 16px 20px;
+}
+
+.logo-section__link:hover {
+  @include hover();
+  @include transition();
+  opacity: 1;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+
+.navigation__link {
+  display: inline-block;
+  text-align: center;
+  padding-top: 55px;
+  position: relative;
+  @include brandonFont(bold, 12px, rgba(255, 255, 255, 0.35));
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  @include transition();
+
+}
+
+.navigation__link::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  content: "";
+  width: 44px;
+  height: 52px;
+  @include transition();
+
+}
+
+$navigation-icons: (
+        fit: url("../img/icons/motivation-icon.svg"),
+        nut: url("../img/icons/motivation-icon.svg"),
+        motiv: url("../img/icons/motivation-icon.svg"),
+        track: url("../img/icons/tracking-icon.svg"),
+        guid: url("../img/icons/guidance-icon.svg")
+);
+
+.navigation {
+  @each $name, $src in $navigation-icons {
+    &__link_#{$name}::before {
+      background: $src no-repeat center;
+    }
+  }
+}
+
+.navigation__link:hover {
+  cursor: pointer;
+  color: $white;
+  text-decoration: none;
+}
+
+$navigation-icons-hover: (
+        fit: url("../img/icons/guidance-icon-hover.svg"),
+        nut: url("../img/icons/guidance-icon-hover.svg"),
+        motiv: url("../img/icons/guidance-icon-hover.svg"),
+        track: url("../img/icons/guidance-icon-hover.svg"),
+        guid: url("../img/icons/guidance-icon-hover.svg")
+);
+
+.navigation {
+  @each $name, $src in $navigation-icons-hover {
+    &__link_#{$name}:hover::before {
+      background: $src no-repeat center;
+    }
+  }
+}

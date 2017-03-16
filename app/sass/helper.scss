@@ -1,6 +1,4 @@
-/*here is sass variables and mixins*/
 
-/* colors */
 $white: #ffffff;
 $dark: #19242c;
 $dark-grey-blue: #283c4b;
@@ -9,7 +7,6 @@ $aqua-marine: #4bdebe;
 $yellowish-orange: #feab1c;
 
 
-  /* fonts */
 @mixin brandonFont($weight: 500, $size: 13px, $color: #ffffff) {
   font-family: BrandonGrotesque;
   font-weight: $weight;
@@ -24,3 +21,13 @@ $yellowish-orange: #feab1c;
   color: $color;
 }
 
+
+@mixin transition($elem: all, $time: 0.5s, $type: ease) {
+  transition: $elem $time $type;
+}
+
+@mixin hover($color: $white, $textDecoration: none) {
+  cursor: pointer;
+  color: $color;
+  text-decoration: $textDecoration;
+}

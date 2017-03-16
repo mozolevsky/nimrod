@@ -1,3 +1,116 @@
-/*here is sass variables and mixins*/
-/* colors */
-/* fonts */
+header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.32)));
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.32));
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.32)); }
+
+.logo-section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1); }
+
+.logo-section__link {
+  font-family: BrandonGrotesque;
+  font-weight: 500;
+  font-size: 12px;
+  color: #ffffff;
+  opacity: 0.5;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  padding: 16px 20px; }
+
+.logo-section__link:hover {
+  cursor: pointer;
+  color: #ffffff;
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 1; }
+
+.navigation {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  padding-top: 25px;
+  padding-bottom: 15px; }
+
+.navigation__link {
+  display: inline-block;
+  text-align: center;
+  padding-top: 55px;
+  position: relative;
+  font-family: BrandonGrotesque;
+  font-weight: bold;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.navigation__link::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  content: "";
+  width: 44px;
+  height: 52px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.navigation__link_fit::before {
+  background: url("../img/icons/motivation-icon.svg") no-repeat center; }
+
+.navigation__link_nut::before {
+  background: url("../img/icons/motivation-icon.svg") no-repeat center; }
+
+.navigation__link_motiv::before {
+  background: url("../img/icons/motivation-icon.svg") no-repeat center; }
+
+.navigation__link_track::before {
+  background: url("../img/icons/tracking-icon.svg") no-repeat center; }
+
+.navigation__link_guid::before {
+  background: url("../img/icons/guidance-icon.svg") no-repeat center; }
+
+.navigation__link:hover {
+  cursor: pointer;
+  color: #ffffff;
+  text-decoration: none; }
+
+.navigation__link_fit:hover::before {
+  background: url("../img/icons/guidance-icon-hover.svg") no-repeat center; }
+
+.navigation__link_nut:hover::before {
+  background: url("../img/icons/guidance-icon-hover.svg") no-repeat center; }
+
+.navigation__link_motiv:hover::before {
+  background: url("../img/icons/guidance-icon-hover.svg") no-repeat center; }
+
+.navigation__link_track:hover::before {
+  background: url("../img/icons/guidance-icon-hover.svg") no-repeat center; }
+
+.navigation__link_guid:hover::before {
+  background: url("../img/icons/guidance-icon-hover.svg") no-repeat center; }
+
+body {
+  background-color: #19242c;
+  width: 100%;
+  background-image: -webkit-radial-gradient(42% 29%, circle, #385060, #19242c);
+  background-image: radial-gradient(circle at 42% 29%, #385060, #19242c); }

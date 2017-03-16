@@ -1,5 +1,10 @@
 @import 'helper';
+@import 'header';
 
-
+body {
+  background-color: $dark;
+  width: 100%;
+  background-image: radial-gradient(circle at 42% 29%, #385060, $dark);
+}
 
 
