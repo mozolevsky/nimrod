@@ -1,0 +1,43 @@
+body {
+  background-color: $dark;
+}
+.tutorials {
+  @include brandonFont(500, 18px, #ffffff);
+  letter-spacing: 0.5px;
+}
+.tutorials__block > div {
+  padding-bottom: 25px;
+}
+.tutorials__item:hover,
+.tutorials__item:active {
+  text-decoration: none;
+}
+.tutorials__item-img {
+  width: 100%;
+  height: 279px;
+  margin-bottom: 10px;
+}
+.tutorials__item-title {
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 19px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+.tutorials__item-desc {
+  color: $white;
+  line-height: 26px;
+}
+.tutorials__item-title_fitness {
+  color: $aqua-marine;
+}
+.tutorials__item-title_body {
+  color: $yellowish-orange;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}

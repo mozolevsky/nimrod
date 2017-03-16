@@ -1,10 +1,17 @@
 @import 'helper';
 @import 'header';
+@import 'tutorials';
+@import 'tools';
+@import 'footer';
 
 body {
-  background-color: $dark;
   width: 100%;
-  background-image: radial-gradient(circle at 42% 29%, #385060, $dark);
+  background: $dark radial-gradient(circle at 42% 29%, #385060, $dark);
 }
 
-
+.block__title {
+  @include brandonFont(700, 16px, #ffffff);
+  margin-bottom: 20px;
+  line-height: 23px;
+  text-transform: uppercase;
+}

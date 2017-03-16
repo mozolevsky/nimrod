@@ -21,7 +21,6 @@ $yellowish-orange: #feab1c;
   color: $color;
 }
 
-
 @mixin transition($elem: all, $time: 0.5s, $type: ease) {
   transition: $elem $time $type;
 }
@@ -31,3 +30,4 @@ $yellowish-orange: #feab1c;
   color: $color;
   text-decoration: $textDecoration;
 }
+
