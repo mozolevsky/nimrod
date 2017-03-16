@@ -38,7 +38,8 @@ gulp.task('scripts', function () {
 
 gulp.task('libsCssMin',  function () {
     return gulp.src([
-        'app/libs/normalize-css/normalize.css'])
+        'app/libs/normalize-css/normalize.css',
+        'app/libs/bootstrap/dist/css/bootstrap.css'])
         .pipe(cssnano())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('app/css'))
