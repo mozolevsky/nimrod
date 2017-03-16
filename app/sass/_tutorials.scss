@@ -4,6 +4,7 @@ body {
 .tutorials {
   @include brandonFont(500, 18px, #ffffff);
   letter-spacing: 0.5px;
+  padding-bottom: 30px;
 }
 .tutorials__block > div {
   padding-bottom: 25px;
