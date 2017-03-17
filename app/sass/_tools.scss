@@ -3,11 +3,20 @@
   margin-bottom: 25px;
   align-items: stretch;
   background-color: $dark-grey-blue;
+  @include transition();
 }
-.tools__item:hover,
+
+.tools__item:hover {
+  text-decoration: none;
+  box-shadow: 0px -1px 30px -4px rgba(0,0,0,0.86);
+}
+
 .tools__item:active {
   text-decoration: none;
+  box-shadow: inset 0px -1px 30px -4px rgba(0,0,0,0.86);
 }
+
+
 .tools__img {
   width: 40%;
   height: 178px;

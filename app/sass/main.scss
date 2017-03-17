@@ -3,10 +3,12 @@
 @import 'tutorials';
 @import 'tools';
 @import 'footer';
+@import 'start-video';
 
 body {
   width: 100%;
   background: $dark radial-gradient(circle at 42% 29%, #385060, $dark);
+  @include avenirFont();
 }
 
 .block__title {
@@ -15,3 +17,4 @@ body {
   line-height: 23px;
   text-transform: uppercase;
 }
+

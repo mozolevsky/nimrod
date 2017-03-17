@@ -97,4 +97,7 @@ gulp.task('build', ['clean', 'img' , 'sass', 'cssMin', 'scripts'], function (){
 
     var buildHtml = gulp.src('app/*.html')
         .pipe(gulp.dest('dist'));
+
+    var moveVideo = gulp.src('app/video/*')
+        .pipe(gulp.dest('dist'));
 });

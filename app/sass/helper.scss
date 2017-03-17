@@ -7,18 +7,20 @@ $aqua-marine: #4bdebe;
 $yellowish-orange: #feab1c;
 
 
-@mixin brandonFont($weight: 500, $size: 13px, $color: #ffffff) {
+@mixin brandonFont($weight: 500, $size: 13px, $color: #ffffff, $lHeight: normal) {
   font-family: BrandonGrotesque;
   font-weight: $weight;
   font-size: $size;
   color: $color;
+  line-height: $lHeight;
 }
 
-@mixin avenirFont($weight: 500, $size: 13px, $color: #ffffff) {
+@mixin avenirFont($weight: 500, $size: 13px, $color: #ffffff, $lHeight: normal) {
   font-family: AvenirNext;
   font-weight: $weight;
   font-size: $size;
   color: $color;
+  line-height: $lHeight;
 }
 
 @mixin transition($elem: all, $time: 0.5s, $type: ease) {
@@ -31,3 +33,17 @@ $yellowish-orange: #feab1c;
   text-decoration: $textDecoration;
 }
 
+@mixin elemToCenter() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin btn($padding...) {
+  display: inline-block;
+  border: 0;
+  text-align: center;
+  vertical-align: middle;
+  padding: $padding;
+}

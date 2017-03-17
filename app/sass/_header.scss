@@ -92,3 +92,13 @@ $navigation-icons-hover: (
     }
   }
 }
+
+@media (max-width: 460px) {
+  .navigation {
+    justify-content: space-between;
+  }
+
+  .navigation__link {
+    @include brandonFont(bold, 10px, rgba(255, 255, 255, 0.35));
+  }
+}

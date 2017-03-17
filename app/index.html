@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="fonts/fonts.css" type="text/css" charset="utf-8" />
 </head>
 <body>
     <header>
@@ -27,6 +28,29 @@
             </div>
         </div>
     </header>
+    <div class="start-video">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-xs-12">
+                    <div class="start-video__text">
+                        <h1 class="start-video__title">Hey David! Let’s get started…</h1>
+                        <p class="start-video__desc">More intense each day it is time to reach for the “canned tomatoes”. Hey hear me out just a minute, okay? </p>
+                    </div>
+                </div>
+                <div class="col-md-8 col-xs-12">
+                    <div class="video-container" id="video-container">
+                        <div id="videocover">
+                            <button class="video-container__button" type="button">Watch the video</button>
+                        </div>
+                        <video class="video-container__video" id="myvideo">
+                            <source src="video/small.mp4" type="video/mp4">
+                                  Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="tools">
             <h4 class="block__title">Tools</h4>
@@ -62,42 +86,54 @@
             <div class="row tutorials__block">
                 <div class="col-md-4 col-sm-6 col-xs-12">
                 <a class="tutorials__item" href="#">
-                    <img class="tutorials__item-img" src="img/default.jpg">
+                    <div class="tutorials__img-block">
+                        <img class="tutorials__item-img" src="img/default.jpg">
+                    </div>
                     <p class="tutorials__item-title tutorials__item-title_fitness">Fitness</p>
                     <span class="tutorials__item-desc">How to take proper before/after pics</span>
                 </a>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <a class="tutorials__item" href="#">
-                        <img class="tutorials__item-img" src="img/default.jpg">
+                        <div class="tutorials__img-block">
+                            <img class="tutorials__item-img" src="img/default.jpg">
+                        </div>
                         <p class="tutorials__item-title tutorials__item-title_fitness">Fitness</p>
                         <span class="tutorials__item-desc">How to measure body fat percentage</span>
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <a class="tutorials__item" href="#">
-                        <img class="tutorials__item-img" src="img/default.jpg">
+                        <div class="tutorials__img-block">
+                            <img class="tutorials__item-img" src="img/default.jpg">
+                        </div>
                         <p class="tutorials__item-title tutorials__item-title_body">Body</p>
                         <span class="tutorials__item-desc">How to take proper before/after pics</span>
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <a class="tutorials__item" href="#">
-                        <img class="tutorials__item-img" src="img/default.jpg">
+                        <div class="tutorials__img-block">
+                            <img class="tutorials__item-img" src="img/default.jpg">
+                        </div>
                         <p class="tutorials__item-title tutorials__item-title_fitness">Fitness</p>
                         <span class="tutorials__item-desc">How to take proper before/after pics</span>
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <a class="tutorials__item" href="#">
-                        <img class="tutorials__item-img" src="img/default.jpg">
+                        <div class="tutorials__img-block">
+                            <img class="tutorials__item-img" src="img/default.jpg">
+                        </div>
                         <p class="tutorials__item-title tutorials__item-title_fitness">Fitness</p>
                         <span class="tutorials__item-desc">How to measure body fat percentage</span>
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <a class="tutorials__item" href="#">
-                        <img class="tutorials__item-img" src="img/default.jpg">
+                        <div class="tutorials__img-block">
+                            <img class="tutorials__item-img" src="img/default.jpg">
+                        </div>
                         <p class="tutorials__item-title tutorials__item-title_body">Body</p>
                         <span class="tutorials__item-desc">How to take proper before/after pics</span>
                     </a>
@@ -113,5 +149,7 @@
             <li><a href="#"></a></li>
         </ul>
     </footer>
+<script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="js/video.js"></script>
 </body>
 </html>
