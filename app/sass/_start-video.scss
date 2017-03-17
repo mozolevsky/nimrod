@@ -1,7 +1,10 @@
 .start-video {
   padding-top: 46px;
-  padding-bottom: 42px;
   background-color: $dark-grey-blue;
+}
+.start-video_tutorials {
+  padding-top: 19px;
+  padding-bottom: 27px;
 }
 
 .start-video__title {
@@ -10,10 +13,22 @@
   margin-bottom: 22px;
   margin-top: 0;
 }
+.start-video__title_tutorials {
+  font-size: 22px;
+  letter-spacing: 0.6px;
+}
 
 .start-video__desc {
   font-size: 18px;
   opacity: 0.5;
+}
+.start-video__desc_tutorials {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.start-video__text_tutorials {
+  padding-top: 25px;
 }
 
 .video-container {
@@ -51,6 +66,11 @@
   box-shadow: 12px 15px 8px 0 rgba(0, 0, 0, 0.1);
 }
 
+.video-container__button_tutorials {
+  height: 39px;
+  width: 47px;
+}
+
 .video-container__button::before {
   position: absolute;
   left: 16px;
@@ -63,9 +83,26 @@
   border-color: transparent transparent transparent $white;
 }
 
+.video-container__button_tutorials::before {
+  left: 24px;
+}
+
 @media (max-width: 767px) {
   .video-container {
     width: calc(100% + 64px);
     margin: 0 -32px;
+  }
+  .start-video {
+    background-color: $dark-grey-blue;
+  }
+  .start-video_tutorials {
+    padding-top: 12px;
+  }
+  .start-video__text_tutorials {
+    padding-top: 20px;
+  }
+  .start-video__desc_tutorials {
+    font-size: 16px;
+    line-height: 20px;
   }
 }

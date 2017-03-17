@@ -238,7 +238,7 @@ body {
 
 @media (max-width: 768px) {
   .tools {
-    background-color: #283c4b;
+    background-color: rgba(40, 60, 75, 0.6);
     margin-left: -32px;
     margin-right: -32px;
     padding: 24px 47px 24px 32px; }
@@ -253,7 +253,8 @@ body {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    background-color: transparent; }
   .tools__item_first {
     padding-bottom: 15px;
     margin-bottom: 15px;
@@ -328,8 +329,11 @@ body {
 
 .start-video {
   padding-top: 46px;
-  padding-bottom: 42px;
   background-color: #283c4b; }
+
+.start-video_tutorials {
+  padding-top: 19px;
+  padding-bottom: 27px; }
 
 .start-video__title {
   font-family: BrandonGrotesque;
@@ -341,9 +345,20 @@ body {
   margin-bottom: 22px;
   margin-top: 0; }
 
+.start-video__title_tutorials {
+  font-size: 22px;
+  letter-spacing: 0.6px; }
+
 .start-video__desc {
   font-size: 18px;
   opacity: 0.5; }
+
+.start-video__desc_tutorials {
+  font-size: 13px;
+  line-height: 18px; }
+
+.start-video__text_tutorials {
+  padding-top: 25px; }
 
 .video-container {
   width: 100%;
@@ -389,6 +404,10 @@ body {
   -webkit-box-shadow: 12px 15px 8px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 12px 15px 8px 0 rgba(0, 0, 0, 0.1); }
 
+.video-container__button_tutorials {
+  height: 39px;
+  width: 47px; }
+
 .video-container__button::before {
   position: absolute;
   left: 16px;
@@ -400,11 +419,82 @@ body {
   border-width: 6px 0 6px 13px;
   border-color: transparent transparent transparent #ffffff; }
 
+.video-container__button_tutorials::before {
+  left: 24px; }
+
 @media (max-width: 767px) {
   .video-container {
     width: -webkit-calc(100% + 64px);
     width: calc(100% + 64px);
-    margin: 0 -32px; } }
+    margin: 0 -32px; }
+  .start-video {
+    background-color: #283c4b; }
+  .start-video_tutorials {
+    padding-top: 12px; }
+  .start-video__text_tutorials {
+    padding-top: 20px; }
+  .start-video__desc_tutorials {
+    font-size: 16px;
+    line-height: 20px; } }
+
+.breadcrumb {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 12px;
+  background-color: #1b262f;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-border-radius: 0;
+          border-radius: 0; }
+
+.breadcrumb__item {
+  position: relative; }
+
+.breadcrumb__item a {
+  font-family: BrandonGrotesque;
+  font-weight: 700;
+  font-size: 12px;
+  color: #fff;
+  line-height: normal;
+  line-height: 13px;
+  opacity: 0.5;
+  letter-spacing: 0.3px;
+  text-transform: uppercase; }
+
+.breadcrumb > li + li:before {
+  display: none; }
+
+.breadcrumb__item:not(:first-child) {
+  padding-left: 15px; }
+
+.breadcrumb__item:not(:first-child)::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -3px;
+  left: 4px;
+  display: block;
+  padding: 0;
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  opacity: 0.5; }
+
+@media (max-width: 768px) {
+  .breadcrumb {
+    display: none; } }
 
 body {
   width: 100%;

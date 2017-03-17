@@ -44,7 +44,7 @@
 
 @media (max-width: 768px) {
   .tools {
-    background-color: $dark-grey-blue;
+    background-color: rgba(40, 60, 75, 0.6);
     margin-left: -32px;
     margin-right: -32px;
     padding: 24px 47px 24px 32px;
@@ -59,6 +59,7 @@
   .tools__item {
     margin-bottom: 0;
     justify-content: space-between;
+    background-color: transparent;
   }
   .tools__item_first {
     padding-bottom: 15px;
