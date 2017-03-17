@@ -63,9 +63,18 @@
   border-color: transparent transparent transparent $white;
 }
 
-@media (max-width: 767px) {
+@media (max-width: $break-small) {
   .video-container {
     width: calc(100% + 64px);
     margin: 0 -32px;
+  }
+
+  .start-video {
+    padding-top: 23px;
+    padding-bottom: 0px;
+  }
+
+  .start-video__desc {
+    padding-bottom: 26px;
   }
 }

@@ -6,6 +6,10 @@ $azure: #009eff;
 $aqua-marine: #4bdebe;
 $yellowish-orange: #feab1c;
 
+$break-small: 767px;
+$breack-medium: 991px;
+$breack-large: 1199px;
+
 
 @mixin brandonFont($weight: 500, $size: 13px, $color: #ffffff, $lHeight: normal) {
   font-family: BrandonGrotesque;

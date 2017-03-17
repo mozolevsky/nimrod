@@ -42,7 +42,7 @@
   opacity: 0.7;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $break-small) {
   .tools {
     background-color: $dark-grey-blue;
     margin-left: -32px;
@@ -59,6 +59,8 @@
   .tools__item {
     margin-bottom: 0;
     justify-content: space-between;
+    padding: 5px;
+    width: calc(100% + 10px);
   }
   .tools__item_first {
     padding-bottom: 15px;
