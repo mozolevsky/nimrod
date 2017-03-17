@@ -42,7 +42,7 @@
   opacity: 0.7;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $break-small) {
   .tools {
     background-color: rgba(40, 60, 75, 0.6);
     margin-left: -32px;
@@ -60,6 +60,8 @@
     margin-bottom: 0;
     justify-content: space-between;
     background-color: transparent;
+    padding: 5px;
+    width: calc(100% + 10px);
   }
   .tools__item_first {
     padding-bottom: 15px;

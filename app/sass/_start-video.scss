@@ -87,13 +87,15 @@
   left: 24px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: $break-small) {
   .video-container {
     width: calc(100% + 64px);
     margin: 0 -32px;
   }
   .start-video {
     background-color: $dark-grey-blue;
+    padding-top: 23px;
+    padding-bottom: 0px;
   }
   .start-video_tutorials {
     padding-top: 12px;
@@ -104,5 +106,8 @@
   .start-video__desc_tutorials {
     font-size: 16px;
     line-height: 20px;
+  }
+  .start-video__desc {
+    padding-bottom: 26px;
   }
 }

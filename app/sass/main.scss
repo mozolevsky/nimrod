@@ -19,3 +19,8 @@ body {
   text-transform: uppercase;
 }
 
+@media (max-width: $break-small) {
+  body {
+    background: $dark;
+  }
+}

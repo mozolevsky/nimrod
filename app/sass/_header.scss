@@ -10,6 +10,10 @@ header {
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
+.logo-section__mobile-title, .logo-section__mobile-menu {
+  display: none;
+}
+
 .logo-section__link {
   @include brandonFont(500, 12px);
   opacity: 0.5;
@@ -23,6 +27,11 @@ header {
   @include transition();
   opacity: 1;
 }
+
+.logo-section__logo {
+  padding: 12px 20px;
+}
+
 
 .navigation {
   display: flex;
@@ -100,5 +109,62 @@ $navigation-icons-hover: (
 
   .navigation__link {
     @include brandonFont(bold, 10px, rgba(255, 255, 255, 0.35));
+  }
+}
+
+@media (max-width: $break-small) {
+
+  header {
+    background: $dark radial-gradient(circle at 50% -150px, #385060, $dark);
+  }
+
+  .logo-section__link {
+    display: none;
+  }
+
+  .logo-section__mobile-title {
+    display: block;
+    @include brandonFont(500, 12px);
+    opacity: 0.5;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    padding: 16px 20px;
+    margin: 0;
+  }
+
+  .logo-section__mobile-menu {
+    display: block;
+    position: relative;
+    width: 23px;
+    height: 16.4px;
+    right: 20px;
+  }
+
+  .logo-section__mobile-menu:hover {
+    @include hover();
+  }
+
+  .logo-section__mobile-dash {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, 50%);
+    height: 2px;
+    width: 100%;
+    background-color: $white;
+    opacity: 0.5;
+  }
+
+  .logo-section__mobile-menu::before {
+    content: "";
+    @extend .logo-section__mobile-dash;
+    transform: translate(0, 50%);
+    top: 0;
+  }
+
+  .logo-section__mobile-menu::after {
+    content: "";
+    @extend .logo-section__mobile-dash;
+    transform: translate(0, 0);
+    top: 100%;
   }
 }

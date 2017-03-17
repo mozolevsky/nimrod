@@ -1,6 +1,4 @@
-body {
-  background-color: $dark;
-}
+
 .tutorials {
   @include brandonFont(500, 18px, #ffffff);
   letter-spacing: 0.5px;
@@ -47,9 +45,13 @@ body {
   color: $yellowish-orange;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $break-small) {
   .container {
     padding-left: 32px;
     padding-right: 32px;
+  }
+
+  .block__title {
+    margin-top: 22px;
   }
 }
