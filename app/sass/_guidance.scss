@@ -1,0 +1,106 @@
+.guidance {
+  padding-top: 33px;
+}
+.guidance__page-desc {
+  padding: 22px;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+.guidance__desc-title {
+  @include brandonFont(500, 18px, #ffffff, 26px);
+  letter-spacing: 0.5px;
+}
+.guidance__desc-text {
+  @include avenirFont($lHeight: 18px);
+  opacity: 0.6;
+}
+
+.guidance__item {
+  margin-left: 36px;
+  padding-bottom: 30px;
+}
+
+.guidance__item-title {
+  margin-top: 0;
+  @include brandonFont(500, 22px, #ffffff, 31px);
+  letter-spacing: 0.6px;
+}
+
+.guidance__item-info {
+  margin-bottom: 18px;
+  @include brandonFont(500, 13px, #ffffff, 19px);
+  letter-spacing: 0.3px;
+}
+
+.guidance__item-ago {
+  padding: 3px 12px;
+  margin-right: 8px;
+  background-color: #9b5edf;
+  border-radius: 15px;
+}
+
+.guidance__item-date {
+  opacity: 0.6;
+}
+
+.guidance__video #videocover {
+  position: static;
+}
+
+.guidance__video .video-container__video {
+  @include boxShadow;
+}
+
+.guidance__video-desc {
+  margin-top: 18px;
+  padding-right: 82px;
+  @include avenirFont($size: 14px);
+  line-height: 20px;
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .guidance {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0 -32px;
+  }
+  .guidance > div {
+    padding: 0;
+  }
+  .guidance__item {
+    margin-left: 0;
+    padding: 20px 33px;
+    padding-bottom: 0;
+  }
+  .guidance__page-desc {
+    padding-left: 55px;
+    padding-right: 55px;
+    background-color: $dark-grey-blue-two;
+    text-align: center;
+  }
+  .guidance__desc-title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .guidance__desc-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .guidance__video-block {
+    padding-bottom: 22px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .guidance__video-block .video-container {
+    width: 100%;
+    margin: 0;
+  }
+  .guidance__video-desc {
+    margin-top: 11px;
+    padding-right: 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .guidance__item:last-child .guidance__video-block {
+    border-bottom: none;
+  }
+}
