@@ -1,0 +1,354 @@
+.motivation__text {
+  padding-bottom: 57px;
+  padding-top: 42px;
+}
+
+.motivation__item {
+  padding: 34px 45px;
+  border-radius: 2px;
+  @include boxShadow2;
+}
+.motivation__item_why {
+  background-color: $red-pink;
+}
+.motivation__item_quote {
+  background-color: $dark-grey-blue;
+}
+.motivation__title {
+  @include brandonFont(700, 18px, #ffffff, 26px);
+  margin: 0;
+}
+.motivation__desc {
+  @include avenirFont;
+  opacity: 0.6;
+  margin: 10px 0 20px 0;
+}
+.motivation__desc_photo,
+.motivation__desc_video {
+  font-weight: 500;
+  width: 365px;
+}
+.motivation__button {
+  padding: 8px 34px;
+  border-radius: 2px;
+  border: none;
+  @include boxShadow2;
+  @include transition;
+}
+.motivation__button:hover,
+.motivation__button:active {
+  box-shadow: 16px 19px 12px 4px rgba(0,0,0,0.16);;
+}
+.motivation__button_why {
+  background-color: $warm-pink;
+}
+.motivation__button_quote {
+  background-color: $azure;
+}
+.motivation__video {
+  padding-bottom: 57px;
+}
+.motivation__video-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.motivation__video-item {
+  display: inline-block;
+  flex-basis: 20%;
+  position: relative;
+  padding: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.09);
+  border: 1px dashed rgba(255, 255, 255, 0.4);
+  @include transition;
+}
+.motivation__video-item:hover,
+.motivation__video-item:active {
+  @include boxShadow;
+}
+.motivation__video-item_active {
+  border: none;
+  background-color: transparent;
+}
+.motivation__video-item_active.motivation__video-item::before,
+.motivation__video-item_active.motivation__video-item::after {
+  display: none;
+}
+.motivation__add-button {
+  display: none;
+}
+.motivation__video-item::before,
+.motivation__video-item::after {
+  position: absolute;
+  left: 50%;
+  margin-left: -8px;
+  content: "";
+  display: block;
+  width: 17px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.motivation__video-item::after {
+  width: 1px;
+  height: 17px;
+  margin-left: 0;
+  margin-top: -8px;
+}
+
+.motivation__photo {
+  padding-bottom: 66px;
+}
+.motivation__photo-block {
+  padding-top: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.motivation__photo-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  flex-basis: 220px;
+  height: 284px;
+  padding: 31px 33px;
+  position: relative;
+  @extend .motivation__video-item;
+}
+.motivation__photo-item_active {
+  display: flex;
+  align-items: center;
+  flex-basis: 220px;
+  height: 284px;
+}
+.motivation__photo-item_active img {
+  width: 100%;
+}
+.motivation__desc_photo-item {
+  margin-bottom: 0;
+}
+.motivation__photo-item::before {
+  top: 50%;
+  width: 15px;
+  margin-left: -7px;
+}
+.motivation__photo-item::after {
+  top: 50%;
+  height: 15px;
+  margin-top: -7px;
+}
+.motivation__line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.motivation__line-logo {
+  display: block;
+  width: 67px;
+  height: 67px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid $azure;
+  border-radius: 50%;
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.motivation__line-dashed,
+.motivation__line-solid {
+  position: relative;
+  flex-basis: 20px;
+  flex-grow: 1;
+}
+.motivation__line-dashed {
+  border-bottom: 1px dashed $azure;
+}
+.motivation__line-solid {
+  border-bottom: 1px solid $azure;
+}
+.motivation__line-dashed::before,
+.motivation__line-solid::before {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid $azure;
+  border-radius: 50%;
+  @include elemToCenter;
+}
+.motivation__line-dashed::before {
+  left: -3px;
+}
+.motivation__line-solid::before {
+  left: calc(100% + 3px);
+}
+.motivation__edit {
+  display: none;
+}
+
+/*Page is filled by a user*/
+.motivation__item_active {
+  position: relative;
+}
+.motivation__item_active .motivation__title {
+  opacity: 0.5;
+}
+.motivation__item_active .motivation__desc_why {
+  font-size: 36px;
+  line-height: 45px;
+  letter-spacing: 0.9px;
+  opacity: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.motivation__item_active .motivation__desc_quote {
+  font-size: 26px;
+  line-height: 45px;
+  letter-spacing: 0.7px;
+  opacity: 1;
+}
+.motivation__item_active .motivation__button {
+  display: none;
+}
+.motivation__item_active .motivation__edit {
+  display: block;
+  content: '';
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 5px;
+  height: 15px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.motivation__item_active .motivation__edit::before,
+.motivation__item_active .motivation__edit::after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: $white;
+  opacity: 0.5;
+}
+.motivation__item_active .motivation__edit::before {
+  top: 0;
+}
+.motivation__item_active .motivation__edit::after {
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .motivation__text {
+    padding-top: 8px;
+    padding-bottom: 0;
+    background-color: $dark-grey-blue-two;
+  }
+  .motivation__item {
+    margin: 0 -32px;
+    border-radius: 0;
+    text-align: center;
+    box-shadow: none;
+  }
+  .motivation__button_why {
+    width: 100%;
+  }
+  .motivation__button_quote {
+    background-color: $azure;
+    width: 75%;
+  }
+
+  .motivation__video {
+    padding-top: 20px;
+    padding-bottom: 0;
+    background-color: $dark-three;
+    text-align: center;
+  }
+  .motivation__desc_photo,
+  .motivation__desc_video {
+    width: 100%;
+  }
+  .motivation__video-items {
+    flex-direction: column;
+  }
+  .motivation__video-item {
+    flex-basis: 100%;
+    margin-bottom: 16px;
+    min-height: 191px;
+  }
+  .motivation__video-item.motivation__video-item_active {
+    min-height: auto;
+  }
+  .motivation__video-item_empty {
+    display: none;
+  }
+  .motivation__video-item::before,
+  .motivation__video-item::after {
+    display: none;
+  }
+  .motivation__add-button {
+    @include elemToCenter;
+    @include brandonFont(700, 14px);
+    letter-spacing: 0.4;
+    font-style: normal;
+    display: block;
+    width: 138px;
+    padding: 8px;
+  }
+
+  .motivation__photo {
+    padding-top: 20px;
+    padding-bottom: 36px;
+  }
+  .motivation__photo-block {
+    flex-direction: column;
+  }
+  .motivation__photo-item {
+    margin-bottom: 0;
+  }
+  .motivation__photo-item::before,
+  .motivation__photo-item::after {
+    display: block;
+  }
+  .motivation__line {
+    height: 180px;
+    flex-direction: column;
+    margin: 16px 0;
+  }
+  .motivation__line-logo {
+    width: 60px;
+    height: 60px;
+  }
+  .motivation__line-dashed {
+    border-bottom: none;
+    border-right: 1px dashed $azure;
+  }
+  .motivation__line-solid {
+    border-bottom: none;
+    border-right: 1px solid $azure;
+  }
+  .motivation__line-dashed::before {
+    left: 0;
+    top: -3px;
+  }
+  .motivation__line-solid::before {
+    left: 0;
+    top: calc(100% + 3px);
+  }
+
+  .motivation__photo-item_active {
+    flex-basis: 284px;
+    justify-content: center;
+  }
+  .motivation__photo-item_active img {
+    height: 100%;
+    width: auto;
+  }
+}

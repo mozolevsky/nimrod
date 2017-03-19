@@ -74,11 +74,18 @@
   width: 47px;
 }
 
-.video-container__button_guidance {
+.video-container__button_guidance,
+.video-container__button_motivation {
   width: 70px;
   height: 70px;
   background-color: rgba(25, 36, 44, 0.83);
   border-radius: 50%;
+}
+
+.video-container__button_motivation {
+  width: 54px;
+  height: 54px;
+  padding: 0;
 }
 
 .video-container__button::before {
@@ -96,7 +103,8 @@
 .video-container__button_tutorials::before {
   left: 24px;
 }
-.video-container__button_guidance::before {
+.video-container__button_guidance::before,
+.video-container__button_motivation::before{
   @include elemToCenter;
 }
 
