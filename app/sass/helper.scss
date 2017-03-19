@@ -4,15 +4,18 @@ $dark: #19242c;
 $dark-grey-blue: #283c4b;
 $dark-grey-blue-two: #374a59;
 $azure: #009eff;
+$dodger-blue: #329fff;
 $aqua-marine: #4bdebe;
 $yellowish-orange: #feab1c;
+$kivi-green: #97df41;
+$grassy-green: #479d04;
 
 $break-small: 767px;
 $breack-medium: 991px;
 $breack-large: 1199px;
 
 
-@mixin brandonFont($weight: 500, $size: 13px, $color: #ffffff, $lHeight: normal) {
+@mixin brandonFont($weight: 500, $size: 13px, $color: $white, $lHeight: normal) {
   font-family: BrandonGrotesque;
   font-weight: $weight;
   font-size: $size;
@@ -20,7 +23,7 @@ $breack-large: 1199px;
   line-height: $lHeight;
 }
 
-@mixin avenirFont($weight: 500, $size: 13px, $color: #ffffff, $lHeight: normal) {
+@mixin avenirFont($weight: 500, $size: 13px, $color: $white, $lHeight: normal) {
   font-family: AvenirNext;
   font-weight: $weight;
   font-size: $size;
@@ -53,6 +56,12 @@ $breack-large: 1199px;
   padding: $padding;
 }
 
-@mixin boxShadow {
+@mixin boxShadow() {
   box-shadow: 0px -1px 30px -4px rgba(0,0,0,0.86);
+}
+
+@mixin fullMobileBlock () {
+  width: calc(100% + 64px);
+  margin-left: -32px;
+  margin-right: -32px;
 }
