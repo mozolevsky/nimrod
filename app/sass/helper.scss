@@ -1,11 +1,14 @@
 
 $white: #ffffff;
 $dark: #19242c;
+$dark-three: #22323e;
 $dark-grey-blue: #283c4b;
 $dark-grey-blue-two: #374a59;
 $azure: #009eff;
 $aqua-marine: #4bdebe;
 $yellowish-orange: #feab1c;
+$red-pink: #f0425e;
+$warm-pink: #fe5b75;
 
 $break-small: 767px;
 $breack-medium: 991px;
@@ -55,4 +58,8 @@ $breack-large: 1199px;
 
 @mixin boxShadow {
   box-shadow: 0px -1px 30px -4px rgba(0,0,0,0.86);
+}
+
+@mixin boxShadow2 {
+  box-shadow: 12px 15px 8px 0 rgba(0,0,0,0.16);
 }
