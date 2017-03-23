@@ -1,0 +1,24 @@
+.journal__content-wrapper {
+  padding-bottom: 47px;
+}
+
+.nutrition__tab-link_journal {
+  background-color: $dodger-blue;
+}
+
+.journal__title {
+  @include brandonFont(bold, 18px);
+  letter-spacing: 0.5px;
+}
+
+.journal__desc {
+  opacity: 0.5;
+  margin-bottom: 44px;
+}
+
+.journal__app {
+  width: 100%;
+  height: 272px;
+  background-color: $pinkish-grey;
+  border: solid 1px #979797;
+}

@@ -1,7 +1,10 @@
 
 $white: #ffffff;
 $dark: #19242c;
+$dark-two: #1d2a35;
 $dark-three: #22323e;
+$dark-four: #243644;
+$dark-five: #1c2a34;
 $dark-grey-blue: #283c4b;
 $dark-grey-blue-two: #374a59;
 $azure: #009eff;
@@ -12,11 +15,14 @@ $kivi-green: #97df41;
 $grassy-green: #479d04;
 $red-pink: #f0425e;
 $warm-pink: #fe5b75;
+$light-indigo: #8048cf;
+$warm-gray: #979797;
+$pinkish-grey: #c4c4c4;
 
 
 $break-small: 767px;
-$breack-medium: 991px;
-$breack-large: 1199px;
+$break-medium: 991px;
+$break-large: 1199px;
 
 
 @mixin brandonFont($weight: 500, $size: 13px, $color: $white, $lHeight: normal) {
@@ -63,7 +69,6 @@ $breack-large: 1199px;
 @mixin boxShadow() {
   box-shadow: 0px -1px 30px -4px rgba(0,0,0,0.86);
 }
-
 
 @mixin fullMobileBlock () {
   width: calc(100% + 64px);

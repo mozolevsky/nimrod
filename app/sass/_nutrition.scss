@@ -20,9 +20,7 @@
 
 .nutrition__tabs {
   display: flex;
-  justify-content: center;
-  border-bottom: 1px solid transparent;
-  width: 100%;
+  justify-content: space-between;
 }
 
 .nutrition__tab {
@@ -31,43 +29,40 @@
 
 .nutrition__tab-link {
   @include brandonFont(bold, 14px);
+  @include transition();
   letter-spacing: 0.4px;
   opacity: 0.2;
   text-transform: uppercase;
-}
-
-.nutrition__tabs > li > .nutrition__tab-link {
   padding: 30px 35px;
   margin: 0;
   border: 0;
 }
 
-.nutrition__tabs > li > .nutrition__tab-link:hover {
-  margin: 0;
-  border: 0;
-  border-radius: 0;
+.nutrition__tab-link:hover {
+  background: $dark-four;
+  color: $white;
+  text-decoration: none;
+
 }
 
-.nutrition__tabs > li.active > a.nutrition__tab-link,
-.nutrition__tabs > li.active > a.nutrition__tab-link:hover {
-  background-color: $kivi-green;
-  border-radius: 0;
+.nutrition__tab-link {
+  background-color: $dark-two;
   opacity: 1;
-  border: 0;
-  margin: 0;
+  @include transition();
 }
 
-@keyframes opacityAnimation {
-  0%   {opacity: 0;}
-  25%  {opacity: 0.25;}
-  50%  {opacity: 0.5;}
-  100% {opacity: 1;}
+.nutrition__tab-link_intro {
+  background-color: $light-indigo;
+  @include hover($white);
 }
 
 .nutrition__tabs-content {
   background-color: $dark-grey-blue;
   box-shadow: 12px 15px 11px 0 rgba(0, 0, 0, 0.16);
   padding-top: 38px;
+}
+
+.nutrition__intro-block {
   padding-bottom: 47px;
 }
 
@@ -79,11 +74,6 @@
 
 .nutrition__desc {
   opacity: 0.5;
-}
-
-.nutrition__sub-title {
-  @include brandonFont(bold, 18px);
-  letter-spacing: 0.5px;
 }
 
 .nutrition__label-txt {
@@ -108,93 +98,8 @@
   transform: scale(1.1);
 }
 
-.transform__letter {
-  @include brandonFont(bold, 54px);
-  @include transition();
-  opacity: 0.2;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
-}
 
-.transform__letter:hover {
-  @include hover($dodger-blue);
-  opacity: 1;
-}
-
-.transform__letter_active {
-  position: relative;
-  color: $white;
-  padding: 9px 30px;
-  margin: -9px -30px;
-  background-color: $dodger-blue;
-  opacity: 1;
-}
-
-.transform__letter_active:hover {
-  cursor: default;
-  color: $white;
-}
-
-.transform__letter_active::after {
-  content: '';
-  width: 10px;
-  height: 10px;
-  background-color: $dodger-blue;
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translate(-50%, 0) rotate(45deg);
-}
-
-.transform__block {
-  display: flex;
-  margin-left: 43px;
-  margin-right: 43px;
-  justify-content: space-between;
-  margin-top: 71px;
-  margin-bottom: 30px;
-}
-
-.transform__tab-container {
-  background-color: $white;
-  float: inherit;
-  margin: 0 -12.5px;
-  margin-bottom: -47px;
-  box-shadow: 12px 15px 11px 0 rgba(0, 0, 0, 0.16);
-}
-
-.transform__title {
-  @include brandonFont(bold, 18px);
-  letter-spacing: 0.5px;
-  width: 100%;
-  background-color: $dark;
-  padding: 20px 0;
-  text-align: center;
-}
-
-.transform__title-word {
-  color: $dodger-blue;
-}
-
-.transform__title::before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  background-color: $dark;
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  transform: translate(-50%, 0) rotate(45deg);
-}
-
-.transform__desc {
-  @extend .nutrition__desc;
-  margin: 25px 0;
-  color: $dark;
-  opacity: 0.6;
-}
-
-
-@media (max-width: $breack-medium) {
+@media (max-width: $break-medium) {
   .nutrition__tabs-content {
     padding-left: 20px;
     padding-right: 20px;
@@ -207,22 +112,7 @@
   .transform__tab-container {
     margin: 0;
   }
-
-  .transform__desc {
-    padding: 25px;
-    margin: 0;
-  }
 }
-
-.nutrition__desc-bigSize {
-  @extend .nutrition__desc;
-  font-size: 16px;
-}
-
-
-
-
-
 
 @media (max-width: $break-small) {
 
@@ -241,35 +131,31 @@
     margin: 0 -32px;
   }
 
-  .nutrition__tab {
-    width: 20%;
-    text-align: center;
+  .nutrition__tabs {
+    width: 100%;
+
   }
 
   .nutrition__tab-link {
-    @include brandonFont(bold, 10px);
-  }
-
-  .nutrition__tabs > li > .nutrition__tab-link {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    font-size: 10px;
+    flex-grow: 1;
+    padding: 25px 3.5vw;
+    text-align: center;
   }
 
   .nutrition__tabs-content {
     @include fullMobileBlock();
+    margin-top: 0;
+    padding-bottom: 30px;
   }
 
   .nutrition__title {
     font-size: 24px;
   }
 
-  .transform__letter {
-    font-size: 30px;
-  }
-
-  .transform__letter_active {
-    padding: 1% 4%;
-    margin: -1% -4%;
+  .transform__desc {
+    padding: 15px 0;
+    margin: 0;
   }
 
 }
@@ -285,3 +171,4 @@
     margin: 0;
   }
 }
+

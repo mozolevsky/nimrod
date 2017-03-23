@@ -13,45 +13,45 @@ $("#myvideo").bind("pause ended", function() {
     $("#myvideo").attr("controls", false);
 });
 
-/* tabs into nutrition page */
-$('#intro a').click(function (e) {
-    e.preventDefault();
-    $(this).tab('show');
-});
+/* tabs-function */
+function makeTabs(controlBlock, containerBlock, activeTabControl, activeArea) {
+    var controlBlock = document.querySelector(controlBlock);
+    var containerBlock = document.querySelector(containerBlock);
 
-$('#guidlines a').click(function (e) {
-    e.preventDefault();
-    $(this).tab('show');
-});
+    if (controlBlock) {
+        controlBlock.addEventListener('click', function(event) {
+            var target = event.target;
+            event.preventDefault();
 
-$('#meals a').click(function (e) {
-    e.preventDefault();
-    $(this).tab('show');
-});
+            if (!target.hasAttribute('data-tab')) return;
+            var tabNum = target.getAttribute('data-tab');
 
-$('#foodlist a').click(function (e) {
-    e.preventDefault();
-    $(this).tab('show');
-});
+            for (var i = 0; i < controlBlock.children.length; i++) {
+                if (controlBlock.children[i].className.indexOf(activeTabControl) !== -1) {
+                    controlBlock.children[i].classList.remove(activeTabControl);
+                }
+            }
 
-$('#journal a').click(function (e) {
-    e.preventDefault();
-    $(this).tab('show');
-});
+            for (var i = 0; i < containerBlock.children.length; i++) {
+                if (containerBlock.children[i].className.indexOf(activeArea) !== -1) {
+                    containerBlock.children[i].classList.remove(activeArea);
+                }
+            }
 
-+(function() {
-    var photoBlock = document.querySelector('.nutrition__top-img-block');
-    var nutritionTabs = document.querySelector('.nutrition__tabs');
-    var nutritTopPhoto = document.querySelector('.nutrition__top-img');
+            target.classList.add(activeTabControl);
+            containerBlock.children[tabNum - 1].classList.add(activeArea);
+        });
+    }
+};
 
-    nutritionTabs.addEventListener('click', function(event) {
-        var target = event.target;
-        nutritTopPhoto.removeAttribute('style');
+    /* tabs nutrition meal */
+    makeTabs('.meals-tabs', '.meals-tabs__container', 'meals-tabs__link_active', 'meals-tabs__tab-area_active');
 
-        if (!target.hasAttribute('data-name')) return;
+    /* transform tabs */
+    makeTabs('.transform__block', '.transform__tabs-container', 'transform__letter_active', 'transform__tab-container_active');
 
-        nutritTopPhoto.setAttribute('style', 'animation: opacityAnimation; animation-duration: 0.5s');
-        var path = 'img/nutritionBg/' + target.getAttribute('data-name') + '.jpg'
-        nutritTopPhoto.setAttribute('src', path);
-    });
-})();
+
+
+
+
+

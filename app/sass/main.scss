@@ -7,6 +7,10 @@
 @import 'breadcrumbs';
 @import 'guidance';
 @import 'nutrition';
+@import 'nutritionGuidlines';
+@import 'nutritionMeals';
+@import 'nutritionFoodlist';
+@import 'nutritionJournal';
 @import 'motivation';
 
 body {
@@ -14,6 +18,7 @@ body {
   background: $dark radial-gradient(circle at 42% 29%, #385060, $dark);
   @include avenirFont();
 }
+
 
 .block__title {
   @include brandonFont(700, 16px, #ffffff);
