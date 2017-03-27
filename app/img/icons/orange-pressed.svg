@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="44px" height="50px" viewBox="0 0 44 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>orange pressed</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M20.2736969,0.409278082 C21.2271078,-0.145323561 22.7700919,-0.146952507 23.7263031,0.409278082 L42.2736969,11.1983464 C43.2271078,11.752948 44,13.0984705 44,14.2109317 L44,35.7890683 C44,36.8982716 43.2299081,38.245423 42.2736969,38.8016536 L23.7263031,49.5907219 C22.7728922,50.1453236 21.2299081,50.1469525 20.2736969,49.5907219 L1.7263031,38.8016536 C0.772892225,38.247052 -2.93098879e-14,36.9015295 -3.06421555e-14,35.7890683 L-4.21884749e-14,14.2109317 C-4.26325641e-14,13.1017284 0.770091917,11.754577 1.7263031,11.1983464 L20.2736969,0.409278082 Z" id="path-1"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="0.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="-1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.179630888 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#FFC868" offset="0%"></stop>
+            <stop stop-color="#FF8D45" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <g opacity="0.600000024">
+                <use fill-opacity="0.100000001" fill="#000000" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use stroke-opacity="0.101251132" stroke="#000000" stroke-width="1" xlink:href="#path-1"></use>
+            </g>
+            <path d="M31.6595326,27.6357548 L29.2650187,30.0295147 L28.467727,29.2275109 L29.4928971,28.2025293 L24.0956281,28.2025293 L24.0956281,21.429131 L19.5853697,21.429131 L19.5853697,28.1946129 L12.8198878,28.1946129 L12.8198878,27.0610639 L18.4518207,27.0610639 L18.4559674,20.295582 L25.2214492,20.295582 L25.2214492,27.0689802 L29.4966668,27.0689802 L28.467727,26.0392865 L29.2650187,25.2416178 L31.6595326,27.6357548 Z M22.9703724,22.550994 L22.9703724,29.3321201 L20.7110023,29.3321201 L20.7110023,22.550994 L22.9703724,22.550994 Z" fill="url(#linearGradient-3)"></path>
+        </g>
+    </g>
+</svg>

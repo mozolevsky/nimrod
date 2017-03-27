@@ -9,7 +9,9 @@
 }
 
 .transform__letter {
-  @include brandonFont(bold, 54px);
+  font-family: EurostileExt-BlaIta;
+  font-size: 54px;
+  font-weight: bold;
   @include transition();
   opacity: 0.2;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
@@ -23,8 +25,8 @@
 .transform__letter_active {
   position: relative;
   color: $white;
-  padding: 1% 3.5%;
-  margin: -1% -3.5%;
+  padding: 1% 2.5%;
+  margin: -1% -2.5%;
   background-color: $dodger-blue;
   opacity: 1;
 }

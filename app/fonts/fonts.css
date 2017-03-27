@@ -40,3 +40,9 @@
     font-weight: 400;
     src: url('avenir-next-regular.woff');
 }
+
+@font-face {
+    font-family: 'EurostileExt-BlaIta';
+    font-weight: bold;
+    src: url("EurostileExt-BlaIta.otf") format("opentype");
+}

@@ -65,11 +65,11 @@ header {
 }
 
 $navigation-icons: (
-        fit: url("../img/icons/motivation-icon.svg"),
-        nut: url("../img/icons/motivation-icon.svg"),
-        motiv: url("../img/icons/motivation-icon.svg"),
-        track: url("../img/icons/tracking-icon.svg"),
-        guid: url("../img/icons/guidance-icon.svg")
+        fit: url("../img/icons/green.svg"),
+        nut: url("../img/icons/red.svg"),
+        motiv: url("../img/icons/orange.svg"),
+        track: url("../img/icons/blue.svg"),
+        guid: url("../img/icons/purple.svg")
 );
 
 .navigation {
@@ -87,11 +87,11 @@ $navigation-icons: (
 }
 
 $navigation-icons-hover: (
-        fit: url("../img/icons/guidance-icon-hover.svg"),
-        nut: url("../img/icons/guidance-icon-hover.svg"),
-        motiv: url("../img/icons/guidance-icon-hover.svg"),
-        track: url("../img/icons/guidance-icon-hover.svg"),
-        guid: url("../img/icons/guidance-icon-hover.svg")
+        fit: url("../img/icons/green-hover.svg"),
+        nut: url("../img/icons/red-hover.svg"),
+        motiv: url("../img/icons/orange-hover.svg"),
+        track: url("../img/icons/blue-hover.svg"),
+        guid: url("../img/icons/purple-hover.svg")
 );
 
 .navigation {
@@ -101,6 +101,57 @@ $navigation-icons-hover: (
     }
   }
 }
+
+$navigation-icons-active: (
+        fit: url("../img/icons/green-pressed.svg"),
+        nut: url("../img/icons/red-pressed.svg"),
+        motiv: url("../img/icons/orange-pressed.svg"),
+        track: url("../img/icons/blue-pressed.svg"),
+        guid: url("../img/icons/purple-pressed.svg")
+);
+
+.navigation {
+  @each $name, $src in $navigation-icons-active {
+    &__link_#{$name}:active::before {
+      background: $src no-repeat center;
+    }
+  }
+}
+
+.navigation {
+  @each $name, $src in $navigation-icons-active {
+    &__link_#{$name}-active::before {
+      background: $src no-repeat center;
+    }
+  }
+}
+
+.navigation__link::after {
+  position: absolute;
+  top: 77px;
+  left: 50%;
+  margin-left: -12px;
+  content: "";
+  /*
+  border: solid 1px #465765;*/
+  @include transition();
+  display: none;
+
+}
+
+.navigation {
+  @each $name, $src in $navigation-icons-active {
+    &__link_#{$name}-active::after {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 12px 11px 12px;
+      border-color: transparent transparent  #324755 transparent;
+      display: block;
+    }
+  }
+}
+
 
 @media (max-width: 460px) {
   .navigation {

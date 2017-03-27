@@ -1,7 +1,22 @@
 .start-video {
   padding-top: 46px;
+  padding-bottom: 42px;
   background-color: $dark-grey-blue;
+  position: relative;
 }
+
+
+.start-here::after {
+  content: '';
+  width: 133px;
+  height: 84px;
+  position: absolute;
+  top: 290px;
+  left: -146px;
+  background: url('../img/start here@2x.png') no-repeat center;
+  background-size: cover;
+}
+
 .start-video_tutorials {
   padding-top: 19px;
   padding-bottom: 27px;
@@ -108,15 +123,22 @@
   @include elemToCenter;
 }
 
+@media (max-width: $break-medium) {
+  .start-here::after {
+    display: none;
+  }
+}
+
 @media (max-width: $break-small) {
   .video-container {
     width: calc(100% + 64px);
     margin: 0 -32px;
   }
+
   .start-video {
     background-color: $dark-grey-blue;
     padding-top: 23px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
   .start-video_tutorials {
     padding-top: 12px;
