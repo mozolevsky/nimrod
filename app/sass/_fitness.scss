@@ -257,7 +257,7 @@
     height: 20px;
     background: #4bdebe url(../img/arrow-fitness-accordeon.png) no-repeat center;
     margin-right: 18px;
-    @include transition();
+    @include transition(all, 0.7s, ease-in-out);
   }
 
   .accordion-inner__arrow_turned {

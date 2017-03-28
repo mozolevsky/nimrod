@@ -1,17 +1,18 @@
 /* video */
-$("#videocover").click(function() {
-    $("#myvideo").attr("controls", true);
-    var video = $("#myvideo").get(0);
-    video.play();
 
-    $(this).css("visibility", "hidden");
-    return false;
+document.body.addEventListener('click', function (e) {
+    var target = e.target;
+
+    if (target.className == 'videocover' || target.parentNode.className == 'videocover') {
+        var video = target.parentElement.parentElement.querySelector('.video-container__video');
+        var cover = target.parentElement.parentElement.querySelector('.videocover');
+
+        video.setAttribute("controls", true);
+        video.play();
+        cover.setAttribute("style", 'visibility: hidden');
+     }
 });
 
-$("#myvideo").bind("pause ended", function() {
-    $("#videocover").css("visibility", "visible");
-    $("#myvideo").attr("controls", false);
-});
 
 /* tabs-function */
 function makeTabs(controlBlock, containerBlock, activeTabControl, activeArea) {
@@ -74,7 +75,7 @@ function moveArrow(mainArea, arrowParentNode, arrowClass, turnedClass) {
     }
 }
 
-/* moving arrows in accordions */
+/* moving arrows in accordions on the fitness page*/
 var fitness = document.querySelector('.fitness');
 moveArrow(fitness, 'panel-heading', 'fitness__accordeon-arrow', 'arrow-turned');
 
@@ -86,6 +87,11 @@ moveArrow(accordion3, 'accordion-inner__header', 'accordion-inner__arrow', 'acco
 
 var accordion4 = document.getElementById('accordion2');
 moveArrow(accordion4, 'accordion-inner__header', 'accordion-inner__arrow', 'accordion-inner__arrow_turned');
+
+/* moving arrows in accordion on the video page*/
+var accordion5 = document.getElementById('accordion-video');
+moveArrow(accordion5, 'video-accordion__button', 'video-accordion__arrow', 'video-accordion__arrow_turned');
+
 
 /* Manage containers in accordions */
 $(window).ready(function(){
@@ -102,3 +108,32 @@ $('.accordion-inner__header[data-toggle="collapse"]').click(function(e){
         e.stopPropagation();
     }
 });
+
+/* Video Page accordion. Button change state */
+
+function changeState(mainArea, targetClass, newStateClass) {
+    if (mainArea) {
+        mainArea.addEventListener('click', function(e) {
+            var target = e.target;
+
+            while (target.className !== mainArea.className) {
+
+                if (target.className.indexOf(targetClass) !== -1) {
+                    if (target.className.indexOf(newStateClass) == -1) {
+                        target.classList.add(newStateClass);
+                        target.firstChild.textContent = 'Hide videos';
+                    } else {
+                        target.classList.remove(newStateClass);
+                        target.firstChild.textContent = 'Show videos';
+                    }
+                    break;
+                }
+                target = target.parentNode;
+            }
+        });
+    }
+}
+
+var videoAccordion = document.querySelector('.video-accordion');
+changeState(videoAccordion, 'video-accordion__button', 'video-accordion__button_opened');
+

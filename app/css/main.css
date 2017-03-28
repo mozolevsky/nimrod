@@ -520,7 +520,7 @@ header {
 #container {
   position: relative; }
 
-#videocover {
+.videocover {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -528,7 +528,7 @@ header {
   top: 0;
   left: 0; }
 
-#videocover:hover {
+.videocover:hover {
   cursor: pointer; }
 
 .video-container__button {
@@ -2162,8 +2162,8 @@ header {
     height: 20px;
     background: #4bdebe url(../img/arrow-fitness-accordeon.png) no-repeat center;
     margin-right: 18px;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease; }
+    -webkit-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out; }
   .accordion-inner__arrow_turned {
     -webkit-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
@@ -2195,6 +2195,276 @@ header {
   .accordion-inner__day:last-child {
     background-color: rgba(36, 54, 68, 0.57);
     border-right: 0; } }
+
+.video-page__container {
+  padding-top: 19px;
+  padding-bottom: 27px; }
+
+.video-page {
+  margin-top: 24px;
+  margin-bottom: 84px; }
+
+.video-page__date {
+  text-transform: uppercase;
+  font-family: BrandonGrotesque;
+  font-weight: bold;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: normal;
+  letter-spacing: 0.4px; }
+
+.video-page__day {
+  margin-right: 7px; }
+
+.video-page__week {
+  opacity: 0.2; }
+
+.video-page__title {
+  font-family: BrandonGrotesque;
+  font-weight: bold;
+  font-size: 22px;
+  color: #ffffff;
+  line-height: normal;
+  letter-spacing: 0.6px; }
+
+.video-page__desc {
+  opacity: 0.5;
+  line-height: 1.38; }
+
+.video-accordion__panel {
+  margin-bottom: 30px; }
+
+.video-accordion__head {
+  padding: 13px 40px 27px 13px;
+  background-color: #283c4b;
+  -webkit-box-shadow: 12px 15px 11px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 12px 15px 11px 0 rgba(0, 0, 0, 0.12); }
+
+.video-accordion__head:first-child {
+  padding-bottom: 0; }
+
+.video-accordion__head:last-child {
+  padding-top: 0; }
+
+.video-accordion__border-bottom {
+  padding-bottom: 23px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.19); }
+
+.video-accordion__border-top {
+  padding-top: 10px;
+  margin-top: -1px;
+  border-top: 1px solid rgba(255, 255, 255, 0.19); }
+
+.video-accordion__title {
+  font-family: BrandonGrotesque;
+  font-weight: bold;
+  font-size: 18px;
+  color: #ffffff;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  margin-top: 0; }
+
+.video-accordion__desc {
+  opacity: 0.5;
+  line-height: 1.38; }
+
+.video-accordion__button {
+  font-family: BrandonGrotesque;
+  font-weight: bold;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  position: relative; }
+
+.video-accordion__arrow {
+  position: absolute;
+  top: 0;
+  left: 83px;
+  width: 20px;
+  height: 20px;
+  background: #4bdebe url("../img/arrow-fitness-accordeon.png") no-repeat center;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.video-accordion__arrow_turned {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg); }
+
+.video-accordion__body {
+  padding: 20px 44px 40px 36px;
+  background-color: #283c4b;
+  -webkit-box-shadow: 12px 15px 11px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 12px 15px 11px 0 rgba(0, 0, 0, 0.12); }
+
+.exercises {
+  border-left: 3px solid #1f2e38;
+  padding-left: 25px; }
+
+.exercises__title,
+.exercises__finish-title {
+  font-family: BrandonGrotesque;
+  font-weight: bold;
+  font-size: 12px;
+  color: #ffffff;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  position: relative; }
+
+.exercises__finish-title {
+  line-height: 12px; }
+
+.exercises__title::before,
+.exercises__finish-title::before {
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 15px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #4bdebe;
+  border: solid 3.5px #1f2e38;
+  left: -33.5px; }
+
+.exercises__content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+
+.exercises__video {
+  position: relative;
+  width: 183px;
+  height: 103px;
+  margin-right: 23px; }
+
+.exercises__video::before {
+  position: absolute;
+  content: '';
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  top: 50%;
+  left: -31px;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 9px;
+  height: 9px;
+  background-color: #1f2e38; }
+
+.exercises__desc {
+  width: 60%;
+  opacity: 0.5; }
+
+.exercise__advice {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 82px;
+  font-family: BrandonGrotesque;
+  font-weight: bold;
+  font-size: 12px;
+  color: #ffffff;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-right: 36px; }
+
+.exercises__advice_line::after {
+  position: absolute;
+  content: '';
+  width: 3px;
+  height: 74px;
+  border-right: 1px dashed #009eff;
+  bottom: 0;
+  left: 91px;
+  opacity: 0.5; }
+
+@media (max-width: 767px) {
+  .video-page__container {
+    padding-top: 10px;
+    padding-bottom: 0;
+    background: #374a59; }
+  .video-page__title {
+    font-size: 20px;
+    line-height: 1.2; }
+  .video-page__desc {
+    font-size: 16px;
+    line-height: 1.25;
+    padding-bottom: 27px; }
+  .video-accordion {
+    margin: 0 -32px; }
+  .video-accordion__head {
+    padding: 16px 33px 5px 33px; }
+  .video-accordion__button {
+    line-height: 29px;
+    margin-bottom: 22px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    -webkit-border-radius: 2px;
+            border-radius: 2px;
+    background-color: #329fff;
+    -webkit-box-shadow: 12px 15px 8px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 12px 15px 8px 0 rgba(0, 0, 0, 0.1); }
+  .video-accordion__button_opened {
+    background-color: #19242c; }
+  .video-accordion__arrow {
+    left: -webkit-calc(50% + 50px);
+    left: calc(50% + 50px);
+    top: 5px; }
+  .exercises__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .video-accordion__body {
+    padding-right: 32px; }
+  .exercises__video {
+    width: 100%;
+    height: auto; }
+  .exercises__desc {
+    font-size: 14px;
+    width: auto;
+    line-height: 1.29;
+    margin-top: 8px; }
+  .exercise__advice {
+    margin-right: 0;
+    text-align: center; }
+  .exercises__advice_line::after {
+    left: 50%;
+    bottom: 3px;
+    height: 25px; }
+  .exercises__advice_line::before {
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 25px;
+    border-right: 1px dashed #009eff;
+    top: 3px;
+    left: 50%;
+    opacity: 0.5; } }
 
 body {
   width: 100%;
