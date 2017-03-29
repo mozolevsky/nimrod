@@ -22,13 +22,12 @@
   height: 20px;
   background: $aqua-marine url('../img/arrow-fitness-accordeon.png') no-repeat center;
   top: 17px;
-  transform: rotate(90deg);
   right: 30px;
   @include transition();
 }
 
 .arrow-turned {
-  transform: rotate(0deg);
+  transform: rotate(90deg);
 }
 
 .fitness__accordeon-control:hover,
