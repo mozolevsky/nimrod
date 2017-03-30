@@ -30,9 +30,10 @@
 }
 
 .tracking__nav-body {
-  flex-grow: 1;
+  flex-wrap: wrap;
   display: flex;
-  justify-content: space-between;
+  flex-grow: 1;
+  justify-content: flex-start;
   list-style: none;
   margin: 0 6px;
   padding: 8px 27px;
@@ -42,7 +43,7 @@
 }
 
 .tracking__nav-item {
-  padding: 8px 18px;
+  padding: 8px 15px;
   @include brandonFont(700, 14px, #ffffff, 20px);
   letter-spacing: 0.4px;
   color: rgba(255, 255, 255, 0.2);
@@ -57,6 +58,7 @@
   border-radius: 2px;
   cursor: default;
 }
+
 
 /*tracking-pictures*/
 
@@ -111,6 +113,8 @@
 .tracking__tooltip-block {
   position: absolute;
   left: -30px;
+  top: 31px;
+  z-index: 10;
   width: 333px;
   height: 112px;
   padding: 21px 19px;
@@ -457,7 +461,7 @@
   }
 
   .tracking__nav-body {
-    margin-left: -40px;
+    margin: 0 -40px;
     padding: 13px 40px;
   }
 
@@ -465,8 +469,10 @@
     min-width: 70px;
     border-radius: 25px;
     margin-right: 11px;
+    margin-bottom: 10px;
     text-align: center;
     background-color: $dark-four;
+    flex-grow: 1;
   }
 
   .tracking__nav-item_active {
@@ -483,7 +489,7 @@
   }
 
   .tracking__pictures-item {
-    width: 235px;
+    width: auto;
     height: 223px;
   }
 
@@ -589,6 +595,11 @@
 
   .tracking__measure .tracking__add::before {
     color: $lightish-purple;
+  }
+
+  .tracking__pictures_nav .swiper-slide .row {
+    display: flex;
+    flex-direction: column;
   }
 }
 

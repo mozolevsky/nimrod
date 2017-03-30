@@ -6,6 +6,7 @@
     <title>Tracking</title>
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/swiper/dist/css/swiper.min.css">
     <link rel="stylesheet" href="libs/dropzone/dropzone.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="fonts/fonts.css" type="text/css" charset="utf-8" />
@@ -34,55 +35,399 @@
     </div>
 </header>
 <div class="container tracking">
-    <div class="tracking__pictures_nav">
+    <div class="tracking__pictures_nav swiper-container">
         <div class="tracking__nav">
             <div class="tracking__nav-control tracking__nav-control_prev"></div>
-            <ul class="tracking__nav-body">
-                <li class="tracking__nav-item tracking__nav-item_active">Start</li>
-                <li class="tracking__nav-item">Week 1</li>
-                <li class="tracking__nav-item">Week 2</li>
-                <li class="tracking__nav-item">Week 3</li>
-                <li class="tracking__nav-item">Week 4</li>
-                <li class="tracking__nav-item">Week 5</li>
-                <li class="tracking__nav-item">Week 6</li>
-                <li class="tracking__nav-item">Week 7</li>
-                <li class="tracking__nav-item">Week 8</li>
-            </ul>
+            <ul class="tracking__nav-body"></ul>
             <div class="tracking__nav-control tracking__nav-control_next"></div>
         </div>
-        <div class="tracking__pictures row">
-            <div class="col-md-4 col-sm-4">
-                <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
-                    <div class="tracking__tooltip">
-                        <span class="tracking__tooltip-control"> i</span>
-                        <div class="tracking__tooltip-block">
-                            <img src="img/default.jpg">
-                            <p class="tracking__tooltip-text">
-                                <span class="title">How to take your picture?</span>
-                                <span class="text">Ever heard of the Fuller Brush Man? You know, those legendary guys.</span>
-                            </p>
+        <div class="tracking__pictures swiper-wrapper">
+            <div class="swiper-slide">
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                        <div class="tracking__tooltip">
+                            <span class="tracking__tooltip-control"> i</span>
+                            <div class="tracking__tooltip-block">
+                                <img src="img/default.jpg">
+                                <p class="tracking__tooltip-text">
+                                    <span class="title">How to take your picture?</span>
+                                    <span class="text">Ever heard of the Fuller Brush Man? You know, those legendary guys.</span>
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <h4 class="motivation__title">Front Picture</h4>
-                    <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
-                    <div class="dz-message" data-dz-message hidden></div>
-                </form>
-            </div>
-            <div class="col-md-4 col-sm-4">
-                <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
-                    <h4 class="motivation__title">Behind Picture</h4>
-                    <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
-                    <div class="dz-message" data-dz-message hidden></div>
-                </form>
-            </div>
-            <div class="col-md-4 col-sm-4">
-                <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
-                    <h4 class="motivation__title">Side Picture</h4>
-                    <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
-                    <div class="dz-message" data-dz-message hidden></div>
-                </form>
+                        <h4 class="motivation__title">Front Picture</h4>
+                        <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                        <div class="dz-message" data-dz-message hidden></div>
+                    </form>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                        <h4 class="motivation__title">Behind Picture</h4>
+                        <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                        <div class="dz-message" data-dz-message hidden></div>
+                    </form>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                        <h4 class="motivation__title">Side Picture</h4>
+                        <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                        <div class="dz-message" data-dz-message hidden></div>
+                    </form>
+                </div>
             </div>
         </div>
+            <div class="swiper-slide">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <div class="tracking__tooltip">
+                                <span class="tracking__tooltip-control"> i</span>
+                                <div class="tracking__tooltip-block">
+                                    <img src="img/default.jpg">
+                                    <p class="tracking__tooltip-text">
+                                        <span class="title">How to take your picture?</span>
+                                        <span class="text">Ever heard of the Fuller Brush Man? You know, those legendary guys.</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <h4 class="motivation__title">Front Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <h4 class="motivation__title">Behind Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <h4 class="motivation__title">Side Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <div class="tracking__tooltip">
+                                <span class="tracking__tooltip-control"> i</span>
+                                <div class="tracking__tooltip-block">
+                                    <img src="img/default.jpg">
+                                    <p class="tracking__tooltip-text">
+                                        <span class="title">How to take your picture?</span>
+                                        <span class="text">Ever heard of the Fuller Brush Man? You know, those legendary guys.</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <h4 class="motivation__title">Front Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <h4 class="motivation__title">Behind Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <h4 class="motivation__title">Side Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <div class="tracking__tooltip">
+                                <span class="tracking__tooltip-control"> i</span>
+                                <div class="tracking__tooltip-block">
+                                    <img src="img/default.jpg">
+                                    <p class="tracking__tooltip-text">
+                                        <span class="title">How to take your picture?</span>
+                                        <span class="text">Ever heard of the Fuller Brush Man? You know, those legendary guys.</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <h4 class="motivation__title">Front Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <h4 class="motivation__title">Behind Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <h4 class="motivation__title">Side Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <div class="tracking__tooltip">
+                                <span class="tracking__tooltip-control"> i</span>
+                                <div class="tracking__tooltip-block">
+                                    <img src="img/default.jpg">
+                                    <p class="tracking__tooltip-text">
+                                        <span class="title">How to take your picture?</span>
+                                        <span class="text">Ever heard of the Fuller Brush Man? You know, those legendary guys.</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <h4 class="motivation__title">Front Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <h4 class="motivation__title">Behind Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <h4 class="motivation__title">Side Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <div class="tracking__tooltip">
+                                <span class="tracking__tooltip-control"> i</span>
+                                <div class="tracking__tooltip-block">
+                                    <img src="img/default.jpg">
+                                    <p class="tracking__tooltip-text">
+                                        <span class="title">How to take your picture?</span>
+                                        <span class="text">Ever heard of the Fuller Brush Man? You know, those legendary guys.</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <h4 class="motivation__title">Front Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <h4 class="motivation__title">Behind Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <h4 class="motivation__title">Side Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <div class="tracking__tooltip">
+                                <span class="tracking__tooltip-control"> i</span>
+                                <div class="tracking__tooltip-block">
+                                    <img src="img/default.jpg">
+                                    <p class="tracking__tooltip-text">
+                                        <span class="title">How to take your picture?</span>
+                                        <span class="text">Ever heard of the Fuller Brush Man? You know, those legendary guys.</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <h4 class="motivation__title">Front Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <h4 class="motivation__title">Behind Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <h4 class="motivation__title">Side Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <div class="tracking__tooltip">
+                                <span class="tracking__tooltip-control"> i</span>
+                                <div class="tracking__tooltip-block">
+                                    <img src="img/default.jpg">
+                                    <p class="tracking__tooltip-text">
+                                        <span class="title">How to take your picture?</span>
+                                        <span class="text">Ever heard of the Fuller Brush Man? You know, those legendary guys.</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <h4 class="motivation__title">Front Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <h4 class="motivation__title">Behind Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <h4 class="motivation__title">Side Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                        <div class="tracking__tooltip">
+                            <span class="tracking__tooltip-control"> i</span>
+                            <div class="tracking__tooltip-block">
+                                <img src="img/default.jpg">
+                                <p class="tracking__tooltip-text">
+                                    <span class="title">How to take your picture?</span>
+                                    <span class="text">Ever heard of the Fuller Brush Man? You know, those legendary guys.</span>
+                                </p>
+                            </div>
+                        </div>
+                        <h4 class="motivation__title">Front Picture</h4>
+                        <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                        <div class="dz-message" data-dz-message hidden></div>
+                    </form>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                        <h4 class="motivation__title">Behind Picture</h4>
+                        <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                        <div class="dz-message" data-dz-message hidden></div>
+                    </form>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                        <h4 class="motivation__title">Side Picture</h4>
+                        <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                        <div class="dz-message" data-dz-message hidden></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+            <div class="swiper-slide">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <div class="tracking__tooltip">
+                                <span class="tracking__tooltip-control"> i</span>
+                                <div class="tracking__tooltip-block">
+                                    <img src="img/default.jpg">
+                                    <p class="tracking__tooltip-text">
+                                        <span class="title">How to take your picture?</span>
+                                        <span class="text">Ever heard of the Fuller Brush Man? You know, those legendary guys.</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <h4 class="motivation__title">Front Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <h4 class="motivation__title">Behind Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <h4 class="motivation__title">Side Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <div class="tracking__tooltip">
+                                <span class="tracking__tooltip-control"> i</span>
+                                <div class="tracking__tooltip-block">
+                                    <img src="img/default.jpg">
+                                    <p class="tracking__tooltip-text">
+                                        <span class="title">How to take your picture?</span>
+                                        <span class="text">Ever heard of the Fuller Brush Man? You know, those legendary guys.</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <h4 class="motivation__title">Front Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <h4 class="motivation__title">Behind Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
+                            <h4 class="motivation__title">Side Picture</h4>
+                            <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                            <div class="dz-message" data-dz-message hidden></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+         </div>
     </div>
     <div class="tracking__sum row">
         <div class="tracking__sum-item col-md-6 col-sm-6 col-xs-6">
@@ -247,8 +592,26 @@
     </ul>
 </footer>
 <script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="libs/swiper/dist/js/swiper.min.js"></script>
 <script src="libs/dropzone/dropzone.js"></script>
 <script src="js/scripts.min.js"></script>
 <script src="js/addMeasure.js"></script>
+
+<script>
+    var swiperTracking = new Swiper('.tracking__pictures_nav', {
+        pagination: '.tracking__nav-body',
+        slidesPerView: 1,
+        spaceBetween: 40,
+        nextButton: '.tracking__nav-control_next',
+        prevButton: '.tracking__nav-control_prev',
+        paginationType: 'bullets',
+        paginationClickable: true,
+        bulletClass: 'tracking__nav-item',
+        bulletActiveClass: 'tracking__nav-item_active',
+        paginationBulletRender: function (swiper, index, className) {
+            return '<li class="' + className + '">Week ' + (index + 1) + '</li>';
+        }
+    });
+</script>
 </body>
 </html>
