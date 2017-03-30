@@ -22,6 +22,9 @@ body {
   @include avenirFont();
 }
 
+.hide {
+  display: none;
+}
 
 .block__title {
   @include brandonFont(700, 16px, #ffffff);
@@ -34,4 +37,29 @@ body {
   body {
     background: $dark;
   }
+}
+
+/* custom styles for dropzones*/
+
+.dropzone .dz-preview .dz-image {
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.dropzone .dz-preview {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.dropzone .dz-preview  {
+  width: 100%;
+  height: 100%;
+}
+
+.dropzone .dz-preview .dz-error-message {
+  top: 70%;
+  left: 50%;
+  margin-left: -70px;
 }

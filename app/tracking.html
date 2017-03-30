@@ -6,6 +6,7 @@
     <title>Tracking</title>
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/dropzone/dropzone.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="fonts/fonts.css" type="text/css" charset="utf-8" />
 </head>
@@ -51,7 +52,7 @@
         </div>
         <div class="tracking__pictures row">
             <div class="col-md-4 col-sm-4">
-                <button class="tracking__pictures-item tracking__pictures-item_front">
+                <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
                     <div class="tracking__tooltip">
                         <span class="tracking__tooltip-control"> i</span>
                         <div class="tracking__tooltip-block">
@@ -64,19 +65,22 @@
                     </div>
                     <h4 class="motivation__title">Front Picture</h4>
                     <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
-                </button>
+                    <div class="dz-message" data-dz-message hidden></div>
+                </form>
             </div>
             <div class="col-md-4 col-sm-4">
-                <button class="tracking__pictures-item tracking__pictures-item_back">
+                <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
                     <h4 class="motivation__title">Behind Picture</h4>
                     <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
-                </button>
+                    <div class="dz-message" data-dz-message hidden></div>
+                </form>
             </div>
             <div class="col-md-4 col-sm-4">
-                <button class="tracking__pictures-item tracking__pictures-item_side">
+                <form class="tracking__pictures-item tracking__pictures-item_front dropzone" action="/file-upload">
                     <h4 class="motivation__title">Side Picture</h4>
                     <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
-                </button>
+                    <div class="dz-message" data-dz-message hidden></div>
+                </form>
             </div>
         </div>
     </div>
@@ -243,7 +247,8 @@
     </ul>
 </footer>
 <script src="libs/jquery/dist/jquery.min.js"></script>
-<script src="js/video.js"></script>
+<script src="libs/dropzone/dropzone.js"></script>
+<script src="js/scripts.min.js"></script>
 <script src="js/addMeasure.js"></script>
 </body>
 </html>

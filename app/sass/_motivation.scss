@@ -111,6 +111,7 @@
   align-items: center;
   text-align: center;
   flex-basis: 220px;
+  width: 220px;
   height: 284px;
   padding: 31px 33px;
   position: relative;
@@ -312,6 +313,7 @@
   }
   .motivation__photo-item {
     margin-bottom: 0;
+    width: auto;
   }
   .motivation__photo-item::before,
   .motivation__photo-item::after {

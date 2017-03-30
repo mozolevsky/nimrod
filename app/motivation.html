@@ -6,6 +6,7 @@
     <title>Motivation</title>
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/dropzone/dropzone.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="fonts/fonts.css" type="text/css" charset="utf-8" />
 </head>
@@ -77,19 +78,21 @@
             <p class="motivation__desc motivation__desc_photo">Ever heard of the Fuller Brush Man? You know, those legendary guys who came
                 knocking on the front doors of</p>
             <div class="motivation__photo-block">
-                <button class="motivation__photo-item">
+                <form class="motivation__photo-item dropzone" action="/file-upload">
                     <h4 class="motivation__title">Front Picture</h4>
                     <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
-                </button>
+                    <div class="dz-message" data-dz-message hidden></div>
+                </form>
                 <div class="motivation__line">
                     <i class="motivation__line-dashed"></i>
                     <i class="motivation__line-logo"></i>
                     <i class="motivation__line-solid"></i>
                 </div>
-                <button class="motivation__photo-item">
+                <form class="motivation__photo-item dropzone" action="/file-upload">
                     <h4 class="motivation__title">Front Picture</h4>
                     <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
-                </button>
+                    <div class="dz-message" data-dz-message hidden></div>
+                </form>
             </div>
         </div>
     <footer class="footer">
@@ -106,6 +109,7 @@
     </footer>
 <script src="libs/jquery/dist/jquery.min.js"></script>
 <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="libs/dropzone/dropzone.js"></script>
 <script src="js/scripts.js"></script>
 </body>
 </html>
