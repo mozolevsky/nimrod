@@ -84,7 +84,7 @@
   left: 83px;
   width: 20px;
   height: 20px;
-  background: $aqua-marine url('../img/arrow-fitness-accordeon.png') no-repeat center;
+  background: url('../img/arrow-fitness-accordeon.png') no-repeat center;
   transform: rotate(90deg);
   @include transition();
 }

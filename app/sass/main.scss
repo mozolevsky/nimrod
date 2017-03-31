@@ -17,14 +17,16 @@
 @import 'tracking';
 
 body {
-  width: 100%;
   background-color: $dark-grey-blue-four;
-  background-image: url("../img/pentagon-bg@2x.png");
-  background-position: -328px center;
-  background-repeat: no-repeat;
-  background-size: 600px 800px;
-
   @include avenirFont();
+}
+
+.pentagon {
+  width: 100%;
+  background-image: url("../img/pentagon-bg@2x.png");
+  background-position: -450px 386px;
+  background-repeat: no-repeat;
+  background-size: 800px;
 }
 
 

@@ -49,8 +49,15 @@ header {
   transition: all 0.5s ease;
   opacity: 1; }
 
-.logo-section__logo {
-  padding: 12px 20px; }
+.logo-section__logo-img {
+  background: url("../img/icons/logo.svg") no-repeat center;
+  display: block;
+  width: 27px;
+  height: 27px; }
+
+.logo-section__logo-img_grey {
+  opacity: 0.5;
+  background-image: url(../img/logo.svg); }
 
 .navigation {
   display: -webkit-box;
@@ -205,6 +212,9 @@ header {
   border-width: 0 12px 11px 12px;
   border-color: transparent transparent #324755 transparent;
   display: block; }
+
+.second-triangle::after {
+  border-color: transparent transparent #283c4b transparent; }
 
 @media (max-width: 460px) {
   .navigation {
@@ -2294,7 +2304,7 @@ header {
   left: 83px;
   width: 20px;
   height: 20px;
-  background: #4bdebe url("../img/arrow-fitness-accordeon.png") no-repeat center;
+  background: url("../img/arrow-fitness-accordeon.png") no-repeat center;
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
@@ -2621,7 +2631,6 @@ header {
   -webkit-border-radius: 50%;
           border-radius: 50%;
   font-weight: 700;
-  padding-left: 1px;
   margin-bottom: 15px; }
 
 .tracking__tooltip:hover .tracking__tooltip-block {
@@ -3087,17 +3096,19 @@ header {
             flex-direction: column; } }
 
 body {
-  width: 100%;
   background-color: #324755;
-  background-image: url("../img/pentagon-bg@2x.png");
-  background-position: -328px center;
-  background-repeat: no-repeat;
-  background-size: 600px 800px;
   font-family: AvenirNext;
   font-weight: 500;
   font-size: 13px;
   color: #ffffff;
   line-height: normal; }
+
+.pentagon {
+  width: 100%;
+  background-image: url("../img/pentagon-bg@2x.png");
+  background-position: -450px 386px;
+  background-repeat: no-repeat;
+  background-size: 800px; }
 
 .hide {
   display: none; }

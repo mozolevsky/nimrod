@@ -37,8 +37,16 @@ header {
   opacity: 1;
 }
 
-.logo-section__logo {
-  padding: 12px 20px;
+.logo-section__logo-img {
+  background: url('../img/icons/logo.svg') no-repeat center;
+  display: block;
+  width: 27px;
+  height: 27px;
+}
+
+.logo-section__logo-img_grey {
+  opacity: 0.5;
+  background-image: url(../img/logo.svg);
 }
 
 
@@ -157,6 +165,10 @@ $navigation-icons-active: (
       display: block;
     }
   }
+}
+
+.second-triangle::after {
+  border-color: transparent transparent  $dark-grey-blue transparent;
 }
 
 
