@@ -27,10 +27,19 @@ header {
   font-size: 12px;
   color: #ffffff;
   line-height: normal;
-  opacity: 0.5;
+  color: rgba(255, 255, 255, 0.5);
   letter-spacing: 0.3px;
   text-transform: uppercase;
   padding: 16px 20px; }
+
+.logo-section__user-photo {
+  width: 27px;
+  height: 27px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  margin-right: 8px;
+  margin-top: -5px;
+  margin-bottom: -5px; }
 
 .logo-section__link:hover {
   cursor: pointer;
@@ -153,8 +162,6 @@ header {
   left: 50%;
   margin-left: -12px;
   content: "";
-  /*
-  border: solid 1px #465765;*/
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   display: none; }
@@ -164,7 +171,7 @@ header {
   height: 0;
   border-style: solid;
   border-width: 0 12px 11px 12px;
-  border-color: transparent transparent  #324755 transparent;
+  border-color: transparent transparent #324755 transparent;
   display: block; }
 
 .navigation__link_nut-active::after {
@@ -172,7 +179,7 @@ header {
   height: 0;
   border-style: solid;
   border-width: 0 12px 11px 12px;
-  border-color: transparent transparent  #324755 transparent;
+  border-color: transparent transparent #324755 transparent;
   display: block; }
 
 .navigation__link_motiv-active::after {
@@ -180,7 +187,7 @@ header {
   height: 0;
   border-style: solid;
   border-width: 0 12px 11px 12px;
-  border-color: transparent transparent  #324755 transparent;
+  border-color: transparent transparent #324755 transparent;
   display: block; }
 
 .navigation__link_track-active::after {
@@ -188,7 +195,7 @@ header {
   height: 0;
   border-style: solid;
   border-width: 0 12px 11px 12px;
-  border-color: transparent transparent  #324755 transparent;
+  border-color: transparent transparent #324755 transparent;
   display: block; }
 
 .navigation__link_guid-active::after {
@@ -196,7 +203,7 @@ header {
   height: 0;
   border-style: solid;
   border-width: 0 12px 11px 12px;
-  border-color: transparent transparent  #324755 transparent;
+  border-color: transparent transparent #324755 transparent;
   display: block; }
 
 @media (max-width: 460px) {
@@ -1876,7 +1883,7 @@ header {
   position: absolute;
   width: 20px;
   height: 20px;
-  background: #4bdebe url("../img/arrow-fitness-accordeon.png") no-repeat center;
+  background: url("../img/arrow-fitness-accordeon.png") no-repeat center;
   top: 17px;
   right: 30px;
   -webkit-transition: all 0.5s ease;
@@ -2080,7 +2087,8 @@ header {
 .accordion-inner__resting-img {
   width: 31px;
   height: 19.5px;
-  background: #329fff;
+  background-image: url("../img/resting-day.png");
+  background-size: cover;
   margin-top: 15px;
   margin-bottom: 12px; }
 
@@ -2163,7 +2171,7 @@ header {
     display: block;
     width: 20px;
     height: 20px;
-    background: #4bdebe url(../img/arrow-fitness-accordeon.png) no-repeat center;
+    background: url(../img/arrow-fitness-accordeon.png) no-repeat center;
     margin-right: 18px;
     -webkit-transition: all 0.7s ease-in-out;
     transition: all 0.7s ease-in-out; }
@@ -3080,8 +3088,11 @@ header {
 
 body {
   width: 100%;
-  background: #19242c -webkit-radial-gradient(42% 29%, circle, #385060, #19242c);
-  background: #19242c radial-gradient(circle at 42% 29%, #385060, #19242c);
+  background-color: #324755;
+  background-image: url("../img/pentagon-bg@2x.png");
+  background-position: -328px center;
+  background-repeat: no-repeat;
+  background-size: 600px 800px;
   font-family: AvenirNext;
   font-weight: 500;
   font-size: 13px;
@@ -3103,7 +3114,7 @@ body {
 
 @media (max-width: 767px) {
   body {
-    background: #19242c; } }
+    background: #374a59; } }
 
 /* custom styles for dropzones*/
 .dropzone .dz-preview .dz-image {

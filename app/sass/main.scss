@@ -18,9 +18,15 @@
 
 body {
   width: 100%;
-  background: $dark radial-gradient(circle at 42% 29%, #385060, $dark);
+  background-color: $dark-grey-blue-four;
+  background-image: url("../img/pentagon-bg@2x.png");
+  background-position: -328px center;
+  background-repeat: no-repeat;
+  background-size: 600px 800px;
+
   @include avenirFont();
 }
+
 
 .hide {
   display: none;
@@ -35,7 +41,7 @@ body {
 
 @media (max-width: $break-small) {
   body {
-    background: $dark;
+    background: $dark-grey-blue-two;
   }
 }
 

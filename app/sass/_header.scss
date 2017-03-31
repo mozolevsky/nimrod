@@ -16,10 +16,19 @@ header {
 
 .logo-section__link {
   @include brandonFont(500, 12px);
-  opacity: 0.5;
+  color: rgba(255, 255, 255, 0.5);
   letter-spacing: 0.3px;
   text-transform: uppercase;
   padding: 16px 20px;
+}
+
+.logo-section__user-photo {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  margin-right: 8px;
+  margin-top: -5px;
+  margin-bottom: -5px;
 }
 
 .logo-section__link:hover {
@@ -132,8 +141,6 @@ $navigation-icons-active: (
   left: 50%;
   margin-left: -12px;
   content: "";
-  /*
-  border: solid 1px #465765;*/
   @include transition();
   display: none;
 
@@ -146,7 +153,7 @@ $navigation-icons-active: (
       height: 0;
       border-style: solid;
       border-width: 0 12px 11px 12px;
-      border-color: transparent transparent  #324755 transparent;
+      border-color: transparent transparent  $dark-grey-blue-four transparent;
       display: block;
     }
   }
