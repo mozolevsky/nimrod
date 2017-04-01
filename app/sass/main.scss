@@ -15,10 +15,13 @@
 @import 'fitness';
 @import 'videopage';
 @import 'tracking';
+@import 'fadeBlock';
+@import 'popups';
 
 body {
   background-color: $dark-grey-blue-four;
   @include avenirFont();
+  position: relative;
 }
 
 .pentagon {
@@ -28,7 +31,6 @@ body {
   background-repeat: no-repeat;
   background-size: 800px;
 }
-
 
 .hide {
   display: none;
@@ -40,6 +42,11 @@ body {
   line-height: 23px;
   text-transform: uppercase;
 }
+
+button {
+  outline: none;
+}
+
 
 @media (max-width: $break-small) {
   body {

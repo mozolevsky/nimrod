@@ -18,6 +18,9 @@ header {
           align-items: center;
   border-bottom: 2px solid rgba(255, 255, 255, 0.1); }
 
+.logo-section__logo-block {
+  margin-left: 15px; }
+
 .logo-section__mobile-title, .logo-section__mobile-menu {
   display: none; }
 
@@ -565,6 +568,8 @@ header {
   font-size: 14px;
   color: #ffffff;
   line-height: normal;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   -webkit-border-radius: 2px;
           border-radius: 2px;
   background-color: #009eff;
@@ -572,6 +577,9 @@ header {
           box-shadow: 12px 15px 8px 0 rgba(0, 0, 0, 0.1);
   cursor: pointer;
   z-index: 2; }
+
+.video-container__button:hover {
+  background-color: #0083f5; }
 
 .video-container__button_tutorials {
   height: 39px;
@@ -634,7 +642,33 @@ header {
     font-size: 16px;
     line-height: 20px; }
   .start-video__desc {
-    padding-bottom: 26px; } }
+    padding-bottom: 26px; }
+  .video-container__button_guidance {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    display: inline-block;
+    border: 0;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 20px 10px 40px;
+    font-family: BrandonGrotesque;
+    font-weight: bold;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: normal;
+    -webkit-border-radius: 2px;
+            border-radius: 2px;
+    background-color: #009eff;
+    -webkit-box-shadow: 12px 15px 8px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 12px 15px 8px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 2;
+    width: 47px;
+    height: 39px; } }
 
 .breadcrumb {
   padding: 0;
@@ -642,7 +676,7 @@ header {
   margin: 0;
   margin-bottom: 16px;
   padding: 12px;
-  background-color: #1b262f;
+  background-color: rgba(27, 38, 47, 0.35);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1653,7 +1687,7 @@ header {
   border: 1px solid #009eff;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  background-image: url(../img/logo.png);
+  background-image: url(../img/icons/logo.svg);
   background-repeat: no-repeat;
   background-position: center; }
 
@@ -1796,7 +1830,10 @@ header {
   .motivation__video-item.motivation__video-item_active, .motivation__video-item_active.motivation__photo-item, .motivation__video-item_active.tracking__pictures-item {
     min-height: auto; }
   .motivation__video-item_empty {
-    display: none; }
+    display: none;
+    border-color: #009eff; }
+  .motivation__video-item_empty:nth-of-type(2) {
+    display: block; }
   .motivation__video-item::before, .motivation__photo-item::before, .tracking__pictures-item::before,
   .motivation__video-item::after,
   .motivation__photo-item::after,
@@ -1818,7 +1855,10 @@ header {
     font-style: normal;
     display: block;
     width: 138px;
-    padding: 8px; }
+    padding: 8px;
+    background-color: #009eff;
+    -webkit-border-radius: 2px;
+            border-radius: 2px; }
   .motivation__photo {
     padding-top: 20px;
     padding-bottom: 36px; }
@@ -1866,7 +1906,7 @@ header {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  .motivation__photo-item_active img {
+  .mot ivation__photo-item_active img {
     height: 100%;
     width: auto; } }
 
@@ -3095,13 +3135,173 @@ header {
         -ms-flex-direction: column;
             flex-direction: column; } }
 
+.fade-block {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(36, 36, 37, 0.85); }
+
+.motivation__popup.fade {
+  -webkit-transform: translate(-50%, -490px) !important;
+      -ms-transform: translate(-50%, -490px) !important;
+          transform: translate(-50%, -490px) !important;
+  -webkit-transition: all 0.3s ease-in-out !important;
+  transition: all 0.3s ease-in-out !important; }
+
+.motivation__popup.fade.in {
+  -webkit-transform: translate(-50%, -50%) !important;
+      -ms-transform: translate(-50%, -50%) !important;
+          transform: translate(-50%, -50%) !important; }
+
+.motivation__popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 101;
+  padding: 40px 50px !important;
+  width: 370px;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  outline: none; }
+
+.motivation__popup_why {
+  background-color: #f0425e; }
+
+.motivation__popup_quote {
+  background-color: #283c4b; }
+
+.motivation__popup-title {
+  margin-bottom: 35px;
+  font-size: 30px;
+  text-align: center; }
+
+.motivation__popup-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 30px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  text-align: center;
+  outline: none;
+  font-size: 22px;
+  font-weight: 400;
+  color: #ffffff; }
+
+.motivation__popup-input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.6); }
+
+.popup__input:focus,
+.popup__input:active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.2); }
+
+.motivation__popup-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: block;
+  width: 23px;
+  height: 23px;
+  padding: 0;
+  border: none;
+  background-color: transparent; }
+
+.motivation__popup-close::before,
+.motivation__popup-close::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -2px;
+  right: 9px;
+  width: 1px;
+  height: 25px;
+  background-color: #ffffff;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.motivation__popup-close:hover::before,
+.motivation__popup-close:hover::after,
+.motivation__popup-close:active::before,
+.motivation__popup-close:active::after,
+.motivation__popup-close:focus::before,
+.motivation__popup-close:focus::after {
+  width: 2px; }
+
+.motivation__popup-close::after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+
+.motivation__popup-btn {
+  background-color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  color: #283c4b;
+  font-size: 22px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.motivation__popup-btn:hover {
+  -webkit-box-shadow: 0 0 2px 2px #ffffff;
+          box-shadow: 0 0 2px 2px #ffffff; }
+
+@media (max-width: 768px) {
+  .motivation__popup {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 8px 40px 40px 40px;
+    -webkit-border-radius: 0;
+            border-radius: 0;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    left: 0; }
+  .motivation__popup-close {
+    top: 13px;
+    right: 13px; }
+  .motivation__popup-close::before,
+  .motivation__popup-close::after {
+    top: 3px;
+    right: 14px; }
+  .motivation__popup-title {
+    margin-bottom: 20px;
+    font-size: 26px;
+    line-height: 45px;
+    font-weight: 400;
+    text-transform: uppercase; }
+  .motivation__popup.fade {
+    -webkit-transform: translate(0, -490px) !important;
+        -ms-transform: translate(0, -490px) !important;
+            transform: translate(0, -490px) !important; }
+  .motivation__popup.fade.in {
+    -webkit-transform: translate(0, 0) !important;
+        -ms-transform: translate(0, 0) !important;
+            transform: translate(0, 0) !important; } }
+
 body {
   background-color: #324755;
   font-family: AvenirNext;
   font-weight: 500;
   font-size: 13px;
   color: #ffffff;
-  line-height: normal; }
+  line-height: normal;
+  position: relative; }
 
 .pentagon {
   width: 100%;
@@ -3122,6 +3322,9 @@ body {
   margin-bottom: 20px;
   line-height: 23px;
   text-transform: uppercase; }
+
+button {
+  outline: none; }
 
 @media (max-width: 767px) {
   body {

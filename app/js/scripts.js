@@ -137,3 +137,4 @@ function changeState(mainArea, targetClass, newStateClass) {
 var videoAccordion = document.querySelector('.video-accordion');
 changeState(videoAccordion, 'video-accordion__button', 'video-accordion__button_opened');
 
+

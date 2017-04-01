@@ -154,7 +154,7 @@
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid $azure;
   border-radius: 50%;
-  background-image: url(../img/logo.png);
+  background-image: url(../img/icons/logo.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -252,15 +252,18 @@
     padding-bottom: 0;
     background-color: $dark-grey-blue-two;
   }
+
   .motivation__item {
     margin: 0 -32px;
     border-radius: 0;
     text-align: center;
     box-shadow: none;
   }
+
   .motivation__button_why {
     width: 100%;
   }
+
   .motivation__button_quote {
     background-color: $azure;
     width: 75%;
@@ -272,13 +275,16 @@
     background-color: $dark-three;
     text-align: center;
   }
+
   .motivation__desc_photo,
   .motivation__desc_video {
     width: 100%;
   }
+
   .motivation__video-items {
     flex-direction: column;
   }
+
   .motivation__video-item {
     flex-basis: 100%;
     margin-bottom: 16px;
@@ -287,13 +293,21 @@
   .motivation__video-item.motivation__video-item_active {
     min-height: auto;
   }
+
   .motivation__video-item_empty {
     display: none;
+    border-color: $azure;
   }
+
+  .motivation__video-item_empty:nth-of-type(2) {
+    display: block;
+  }
+
   .motivation__video-item::before,
   .motivation__video-item::after {
     display: none;
   }
+
   .motivation__add-button {
     @include elemToCenter;
     @include brandonFont(700, 14px);
@@ -302,44 +316,55 @@
     display: block;
     width: 138px;
     padding: 8px;
+    background-color: $azure;
+    border-radius: 2px;
   }
 
   .motivation__photo {
     padding-top: 20px;
     padding-bottom: 36px;
   }
+
   .motivation__photo-block {
     flex-direction: column;
   }
+
   .motivation__photo-item {
     margin-bottom: 0;
     width: auto;
   }
+
   .motivation__photo-item::before,
   .motivation__photo-item::after {
     display: block;
   }
+
   .motivation__line {
     height: 180px;
     flex-direction: column;
     margin: 16px 0;
   }
+
   .motivation__line-logo {
     width: 60px;
     height: 60px;
   }
+
   .motivation__line-dashed {
     border-bottom: none;
     border-right: 1px dashed $azure;
   }
+
   .motivation__line-solid {
     border-bottom: none;
     border-right: 1px solid $azure;
   }
+
   .motivation__line-dashed::before {
     left: 0;
     top: -3px;
   }
+
   .motivation__line-solid::before {
     left: 0;
     top: calc(100% + 3px);
@@ -349,7 +374,8 @@
     flex-basis: 284px;
     justify-content: center;
   }
-  .motivation__photo-item_active img {
+  .mot
+  ivation__photo-item_active img {
     height: 100%;
     width: auto;
   }

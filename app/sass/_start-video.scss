@@ -5,7 +5,6 @@
   position: relative;
 }
 
-
 .start-here::after {
   content: '';
   width: 133px;
@@ -28,6 +27,7 @@
   margin-bottom: 22px;
   margin-top: 0;
 }
+
 .start-video__title_tutorials {
   font-size: 22px;
   letter-spacing: 0.6px;
@@ -37,6 +37,7 @@
   font-size: 18px;
   opacity: 0.5;
 }
+
 .start-video__desc_tutorials {
   font-size: 13px;
   line-height: 18px;
@@ -77,11 +78,16 @@
   @include elemToCenter();
   @include btn(10px 20px 10px 40px);
   @include brandonFont(bold, 14px);
+  @include transition;
   border-radius: 2px;
   background-color: $azure;
   box-shadow: 12px 15px 8px 0 rgba(0, 0, 0, 0.1);
   cursor: pointer;
   z-index: 2;
+}
+
+.video-container__button:hover {
+  background-color: $cerulean-blue;
 }
 
 .video-container__button_tutorials {
@@ -118,6 +124,7 @@
 .video-container__button_tutorials::before {
   left: 24px;
 }
+
 .video-container__button_guidance::before,
 .video-container__button_motivation::before{
   @include elemToCenter;
@@ -140,17 +147,34 @@
     padding-top: 23px;
     padding-bottom: 0;
   }
+
   .start-video_tutorials {
     padding-top: 12px;
   }
+
   .start-video__text_tutorials {
     padding-top: 20px;
   }
+
   .start-video__desc_tutorials {
     font-size: 16px;
     line-height: 20px;
   }
+
   .start-video__desc {
     padding-bottom: 26px;
+  }
+
+  .video-container__button_guidance {
+    @include elemToCenter();
+    @include btn(10px 20px 10px 40px);
+    @include brandonFont(bold, 14px);
+    border-radius: 2px;
+    background-color: $azure;
+    box-shadow: 12px 15px 8px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 2;
+    width: 47px;
+    height: 39px;
   }
 }

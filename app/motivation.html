@@ -40,7 +40,7 @@
                         <h4 class="motivation__title">What is your WHY?</h4>
                         <p class="motivation__desc">Ever heard of the Fuller Brush Man? You know, those legendary guys who
                             came knocking on the front doors of America, selling brushes</p>
-                        <button class="motivation__button motivation__button_why">Add why</button>
+                        <button class="motivation__button motivation__button_why" type="button" data-toggle="modal" data-target="#whyModal">Add why</button>
                     </div>
                 </div>
                 <div class="col-md-7 col-sm-7">
@@ -49,7 +49,7 @@
                         <p class="motivation__desc">Ever heard of the Fuller Brush Man? You know, those legendary guys who
                             came knocking on the front doors of America, selling brushes, mops and cleaners? I was one of
                             them, back in my early twenties.</p>
-                        <button class="motivation__button motivation__button_quote">Add motivational quote</button>
+                        <button class="motivation__button motivation__button_quote" type="button" data-toggle="modal" data-target="#quoteModal">Add motivational quote</button>
                     </div>
                 </div>
             </div>
@@ -68,9 +68,9 @@
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <button class="motivation__video-item motivation__video-item_empty"><i class="motivation__add-button motivation__button motivation__button_quote">ADD VIDEO</i></button>
-                <button class="motivation__video-item motivation__video-item_empty"><i class="motivation__add-button">ADD VIDEO</i></button>
-                <button class="motivation__video-item motivation__video-item_empty"><i class="motivation__add-button">ADD VIDEO</i></button>
+                <button class="motivation__video-item motivation__video-item_empty" type="button" data-toggle="modal" data-target="#videoModal"><i class="motivation__add-button motivation__button motivation__button_quote">ADD VIDEO</i></button>
+                <button class="motivation__video-item motivation__video-item_empty" type="button" data-toggle="modal" data-target="#videoModal"><i class="motivation__add-button">ADD VIDEO</i></button>
+                <button class="motivation__video-item motivation__video-item_empty" type="button" data-toggle="modal" data-target="#videoModal"><i class="motivation__add-button">ADD VIDEO</i></button>
             </div>
         </div>
         <div class="container motivation__photo">
@@ -107,6 +107,31 @@
             <li>Copyright 2009-2017</li>
         </ul>
     </footer>
+
+    <!-- POPUP MOTIVATION WHY -->
+    <div class="fade motivation__popup motivation__popup_why" id="whyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <p class="motivation__popup-title">Popup title</p>
+        <input class="motivation__popup-input" type="tel" placeholder="Why">
+        <button type="button" class="motivation__popup-btn">Send</button>
+        <button class="motivation__popup-close" type="button" data-dismiss="modal"></button>
+    </div>
+
+    <!-- POPUP MOTIVATION QUOTE -->
+    <div class="fade motivation__popup motivation__popup_quote" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <p class="motivation__popup-title">Popup title</p>
+        <input class="motivation__popup-input" type="tel" placeholder="Quote">
+        <button class="motivation__popup-btn">Send</button>
+        <button class="motivation__popup-close" type="button" data-dismiss="modal"></button>
+    </div>
+
+    <!-- POPUP VIDEO DOWNLOAD -->
+    <div class="fade motivation__popup motivation__popup_quote motivation__popup_video" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <p class="motivation__popup-title">Popup title</p>
+        <input class="motivation__popup-input" type="tel" placeholder="Enter URL">
+        <button class="motivation__popup-btn">Send</button>
+        <button class="motivation__popup-close" type="button" data-dismiss="modal"></button>
+    </div>
+
 <script src="libs/jquery/dist/jquery.min.js"></script>
 <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="libs/dropzone/dropzone.js"></script>

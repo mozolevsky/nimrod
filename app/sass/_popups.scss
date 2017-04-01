@@ -1,0 +1,152 @@
+.motivation__popup.fade {
+  transform: translate(-50%, -490px) !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.motivation__popup.fade.in {
+  transform: translate(-50%, -50%) !important;
+}
+
+.motivation__popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 101;
+  padding: 40px 50px !important;
+  width: 370px;
+  border-radius: 2px;
+  outline: none;
+}
+
+.motivation__popup_why {
+  background-color: $red-pink;
+}
+
+.motivation__popup_quote {
+  background-color: $dark-grey-blue;
+}
+
+.motivation__popup-title {
+  margin-bottom: 35px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.motivation__popup-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 30px;
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 2px;
+  text-align: center;
+  outline: none;
+  font-size: 22px;
+  font-weight: 400;
+  color: $white;
+}
+
+.motivation__popup-input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.popup__input:focus,
+.popup__input:active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.motivation__popup-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: block;
+  width: 23px;
+  height: 23px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.motivation__popup-close::before,
+.motivation__popup-close::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -2px;
+  right: 9px;
+  width: 1px;
+  height: 25px;
+  background-color: $white;
+  transform: rotate(45deg);
+  @include transition;
+}
+
+.motivation__popup-close:hover::before,
+.motivation__popup-close:hover::after,
+.motivation__popup-close:active::before,
+.motivation__popup-close:active::after,
+.motivation__popup-close:focus::before,
+.motivation__popup-close:focus::after {
+  width: 2px;
+}
+
+.motivation__popup-close::after {
+  transform: rotate(-45deg);
+}
+
+.motivation__popup-btn {
+  background-color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 2px;
+  color: $dark-grey-blue;
+  font-size: 22px;
+  @include transition;
+}
+
+.motivation__popup-btn:hover {
+  box-shadow: 0 0 2px 2px $white;
+}
+
+@media (max-width: 768px) {
+  .motivation__popup {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 8px 40px 40px 40px;
+    border-radius: 0;
+    transform: none;
+    left: 0;
+  }
+
+  .motivation__popup-close {
+    top: 13px;
+    right: 13px;
+  }
+
+  .motivation__popup-close::before,
+  .motivation__popup-close::after {
+    top: 3px;
+    right: 14px;
+
+  }
+
+  .motivation__popup-title {
+    margin-bottom: 20px;
+    font-size: 26px;
+    line-height: 45px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .motivation__popup.fade {
+    transform: translate(0, -490px) !important;
+  }
+
+  .motivation__popup.fade.in {
+    transform: translate(0, 0) !important;
+  }
+}
