@@ -148,7 +148,13 @@
   margin-right: 2px;
   min-height: 116.2px;
   flex: 123px;
+  @include transition();
 }
+
+.accordion-inner__day:hover {
+  background: url('../img/152x116.png');
+}
+
 
 .accordion-inner__day:nth-child(2n+1) {
   background-color: rgba(36, 54, 68, 0.57);

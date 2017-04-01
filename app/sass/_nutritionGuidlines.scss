@@ -10,10 +10,11 @@
 
 .transform__letter {
   font-family: EurostileExt-BlaIta;
-  font-size: 54px;
+  font-size: 5vw;
   font-weight: bold;
   @include transition();
   opacity: 0.2;
+  padding: 2.5%;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -25,8 +26,6 @@
 .transform__letter_active {
   position: relative;
   color: $white;
-  padding: 1% 2.5%;
-  margin: -1% -2.5%;
   background-color: $dodger-blue;
   opacity: 1;
 }
@@ -96,7 +95,6 @@
   opacity: 0.5;
   margin: 25px 0;
   color: $dark;
-  opacity: 0.6;
 }
 
 @media (max-width: $break-small) {
@@ -106,11 +104,6 @@
 
   .transform__letter {
     font-size: 5vw;
-  }
-
-  .transform__letter_active {
-    padding: 1% 4%;
-    margin: -1% -4%;
   }
 
   .transform__desc {

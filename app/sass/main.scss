@@ -27,6 +27,9 @@ body {
   background-position: -450px 386px;
   background-repeat: no-repeat;
   background-size: 800px;
+  @media (max-width: $break-small) {
+    background: $dark-grey-blue-four;
+  }
 }
 
 

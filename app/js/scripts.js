@@ -82,10 +82,10 @@ moveArrow(fitness, 'panel-heading', 'fitness__accordeon-arrow', 'arrow-turned');
 var accordion2 = document.getElementById('accordion2');
 moveArrow(accordion2, 'accordion-inner__header', 'accordion-inner__arrow', 'accordion-inner__arrow_turned');
 
-var accordion3 = document.getElementById('accordion2');
+var accordion3 = document.getElementById('accordion3');
 moveArrow(accordion3, 'accordion-inner__header', 'accordion-inner__arrow', 'accordion-inner__arrow_turned');
 
-var accordion4 = document.getElementById('accordion2');
+var accordion4 = document.getElementById('accordion4');
 moveArrow(accordion4, 'accordion-inner__header', 'accordion-inner__arrow', 'accordion-inner__arrow_turned');
 
 /* moving arrows in accordion on the video page*/
@@ -95,16 +95,25 @@ moveArrow(accordion5, 'video-accordion__button', 'video-accordion__arrow', 'vide
 
 /* Manage containers in accordions */
 $(window).ready(function(){
-    if ($(window).width() >= 768){
+    if ($(window).width() >= 750){
         $('.accordion-inner__body-wrapper').addClass('in');
     }
-    if ($(window).width() <= 768){
+    if ($(window).width() <= 750){
+        $('.accordion-inner__body-wrapper').removeClass('in');
+    }
+});
+
+$(window).resize(function(){
+    if ($(window).width() >= 750){
+        $('.accordion-inner__body-wrapper').addClass('in');
+    }
+    if ($(window).width() <= 750){
         $('.accordion-inner__body-wrapper').removeClass('in');
     }
 });
 
 $('.accordion-inner__header[data-toggle="collapse"]').click(function(e){
-    if ($(window).width() >= 768) {
+    if ($(window).width() >= 750) {
         e.stopPropagation();
     }
 });
