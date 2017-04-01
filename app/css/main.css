@@ -1023,11 +1023,12 @@ header {
 
 .transform__letter {
   font-family: EurostileExt-BlaIta;
-  font-size: 54px;
+  font-size: 5vw;
   font-weight: bold;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   opacity: 0.2;
+  padding: 2.5%;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5); }
 
 .transform__letter:hover {
@@ -1039,8 +1040,6 @@ header {
 .transform__letter_active {
   position: relative;
   color: #ffffff;
-  padding: 1% 2.5%;
-  margin: -1% -2.5%;
   background-color: #329fff;
   opacity: 1; }
 
@@ -1114,17 +1113,13 @@ header {
 .transform__desc {
   opacity: 0.5;
   margin: 25px 0;
-  color: #19242c;
-  opacity: 0.6; }
+  color: #19242c; }
 
 @media (max-width: 767px) {
   .transform__block {
     margin: 30px 0; }
   .transform__letter {
     font-size: 5vw; }
-  .transform__letter_active {
-    padding: 1% 4%;
-    margin: -1% -4%; }
   .transform__desc {
     margin: 0;
     margin-bottom: -25px; } }
@@ -1137,6 +1132,9 @@ header {
 
 .nutrition__desc-bigSize {
   font-size: 16px; }
+
+.meals-tabs__container {
+  overflow: hidden; }
 
 .meals-tabs {
   display: -webkit-box;
@@ -1211,7 +1209,9 @@ header {
 .meals-tabs__slider-2,
 .meals-tabs__slider-3 {
   background-color: #ffffff;
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+  overflow: visible;
+  position: static; }
 
 .meals-tabs__desc {
   color: #19242c;
@@ -1234,7 +1234,7 @@ header {
   display: flex;
   position: absolute;
   z-index: 100;
-  bottom: 21px;
+  bottom: 0;
   left: 125px;
   -webkit-transform: translate(0, 50%);
       -ms-transform: translate(0, 50%);
@@ -1302,7 +1302,8 @@ header {
 
 @media (max-width: 767px) {
   .meals-tabs__container {
-    margin: 0 -20px; }
+    margin: 0 -20px;
+    margin-bottom: -30px; }
   .meals-tabs {
     margin-top: 30px;
     margin-left: -35px;
@@ -1325,7 +1326,7 @@ header {
   .meals-tabs__slider-1,
   .meals-tabs__slider-2,
   .meals-tabs__slider-3 {
-    padding-bottom: 60px; }
+    padding-bottom: 30px; }
   .meals-tabs__pagination {
     left: 50%;
     margin-left: -75px; }
@@ -2107,7 +2108,12 @@ header {
   -webkit-box-flex: 123px;
   -webkit-flex: 123px;
       -ms-flex: 123px;
-          flex: 123px; }
+          flex: 123px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.accordion-inner__day:hover {
+  background: url("../img/152x116.png"); }
 
 .accordion-inner__day:nth-child(2n+1) {
   background-color: rgba(36, 54, 68, 0.57); }
@@ -2400,7 +2406,20 @@ header {
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
-          justify-content: flex-start; }
+          justify-content: flex-start;
+  position: relative; }
+
+.exercises__content::after {
+  position: absolute;
+  content: '';
+  width: 3px;
+  height: -webkit-calc(100% - 104px);
+  height: calc(100% - 104px);
+  margin-bottom: -4px;
+  border-right: 1px dashed #009eff;
+  bottom: 0;
+  left: 91px;
+  opacity: 0.5; }
 
 .exercises__video {
   position: relative;
@@ -2500,6 +2519,8 @@ header {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column; }
+  .exercises__content::after {
+    display: none; }
   .video-accordion__body {
     padding-right: 32px; }
   .exercises__video {
@@ -3013,19 +3034,21 @@ header {
     padding-bottom: 25px; }
   .tracking__nav-body {
     margin: 0 -40px;
-    padding: 13px 40px; }
+    padding: 13px 40px;
+    display: block;
+    white-space: nowrap;
+    overflow: auto; }
   .tracking__nav-item {
     min-width: 70px;
     -webkit-border-radius: 25px;
             border-radius: 25px;
     margin-right: 11px;
-    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-top: 15px;
     text-align: center;
     background-color: #243644;
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1; }
+    display: inline-block; }
   .tracking__nav-item_active {
     background-color: #329fff;
     color: white; }
@@ -3309,6 +3332,9 @@ body {
   background-position: -450px 386px;
   background-repeat: no-repeat;
   background-size: 800px; }
+  @media (max-width: 767px) {
+    .pentagon {
+      background: #324755; } }
 
 .hide {
   display: none; }

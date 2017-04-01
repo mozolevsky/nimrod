@@ -131,6 +131,19 @@
 .exercises__content {
   display: flex;
   justify-content: flex-start;
+  position: relative;
+}
+
+.exercises__content::after {
+  position: absolute;
+  content: '';
+  width: 3px;
+  height: calc(100% - 104px);
+  margin-bottom: -4px;
+  border-right: 1px dashed $azure;
+  bottom: 0;
+  left: 91px;
+  opacity: 0.5;
 }
 
 .exercises__video {
@@ -231,6 +244,10 @@
 
   .exercises__content {
     flex-direction: column;
+  }
+
+  .exercises__content::after {
+    display: none;
   }
 
   .video-accordion__body {

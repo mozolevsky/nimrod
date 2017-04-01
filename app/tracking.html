@@ -6,6 +6,7 @@
     <title>Tracking</title>
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/scroll/jquery.scrollbar.css">
     <link rel="stylesheet" href="libs/swiper/dist/css/swiper.min.css">
     <link rel="stylesheet" href="libs/dropzone/dropzone.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -38,7 +39,7 @@
     <div class="tracking__pictures_nav swiper-container">
         <div class="tracking__nav">
             <div class="tracking__nav-control tracking__nav-control_prev"></div>
-            <ul class="tracking__nav-body"></ul>
+                <ul class="tracking__nav-body scrollbar-inner"></ul>
             <div class="tracking__nav-control tracking__nav-control_next"></div>
         </div>
         <div class="tracking__pictures swiper-wrapper">
@@ -592,6 +593,13 @@
     </ul>
 </footer>
 <script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="libs/scroll/jquery.scrollbar.min.js"></script>
+<!--<script>
+    $(document).ready(function(){
+        $('.scrollbar-inner').scrollbar();
+    });
+
+</script>-->
 <script src="libs/swiper/dist/js/swiper.min.js"></script>
 <script src="libs/dropzone/dropzone.js"></script>
 <script src="js/scripts.min.js"></script>
@@ -613,5 +621,6 @@
         }
     });
 </script>
+
 </body>
 </html>
