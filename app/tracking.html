@@ -6,7 +6,6 @@
     <title>Tracking</title>
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="libs/scroll/jquery.scrollbar.css">
     <link rel="stylesheet" href="libs/swiper/dist/css/swiper.min.css">
     <link rel="stylesheet" href="libs/dropzone/dropzone.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -593,13 +592,6 @@
     </ul>
 </footer>
 <script src="libs/jquery/dist/jquery.min.js"></script>
-<script src="libs/scroll/jquery.scrollbar.min.js"></script>
-<!--<script>
-    $(document).ready(function(){
-        $('.scrollbar-inner').scrollbar();
-    });
-
-</script>-->
 <script src="libs/swiper/dist/js/swiper.min.js"></script>
 <script src="libs/dropzone/dropzone.js"></script>
 <script src="js/scripts.min.js"></script>
@@ -607,6 +599,7 @@
 
 <script>
     var swiperTracking = new Swiper('.tracking__pictures_nav', {
+        setWrapperSize: true,
         pagination: '.tracking__nav-body',
         slidesPerView: 1,
         spaceBetween: 40,
@@ -614,8 +607,10 @@
         prevButton: '.tracking__nav-control_prev',
         paginationType: 'bullets',
         paginationClickable: true,
+        touchEventsTarget: 'wrapper',
         bulletClass: 'tracking__nav-item',
         bulletActiveClass: 'tracking__nav-item_active',
+
         paginationBulletRender: function (swiper, index, className) {
             return '<li class="' + className + '">Week ' + (index + 1) + '</li>';
         }

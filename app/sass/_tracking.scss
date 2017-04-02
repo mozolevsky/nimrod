@@ -499,6 +499,10 @@
     overflow: auto;
   }
 
+  .tracking__nav-body::-webkit-scrollbar {
+    display: none;
+  }
+
   .tracking__nav-item {
     min-width: 70px;
     border-radius: 25px;
