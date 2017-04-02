@@ -103,6 +103,7 @@
   border-radius: 50%;
   font-weight: 700;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 
 .tracking__tooltip:hover .tracking__tooltip-block{
@@ -111,7 +112,7 @@
 
 .tracking__tooltip-block {
   position: absolute;
-  left: -30px;
+  left: -12px;
   top: 31px;
   z-index: 10;
   width: 333px;
@@ -127,7 +128,7 @@
   display: block;
   position: absolute;
   top: -6px;
-  left: 32px;
+  left: 14px;
   width: 14px;
   height: 14px;
   background-color: $white;
@@ -280,6 +281,7 @@
 }
 
 .tracking__add_filled {
+  position: relative;
   display: inline-block;
   box-sizing: border-box;
   padding: 0 5px;
@@ -295,6 +297,23 @@
   text-align: center;
   @include transition;
   outline: none;
+}
+
+.tracking__add-label_filled {
+  margin-bottom: 0;
+}
+
+.tracking__add-label_filled::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  right: -11px;
+  display: block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: $aqua-marine;
 }
 
 .tracking__add_filled:hover {
@@ -314,6 +333,19 @@
   border-radius: 15px;
   background-color: $red-pink;
   font-size: 10px;
+}
+
+.tracking__measure-item .tracking__add::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  right: -11px;
+  display: block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: $red-pink;
 }
 
 .tracking__add::before {

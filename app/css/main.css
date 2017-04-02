@@ -2692,7 +2692,8 @@ header {
   -webkit-border-radius: 50%;
           border-radius: 50%;
   font-weight: 700;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  cursor: pointer; }
 
 .tracking__tooltip:hover .tracking__tooltip-block {
   display: -webkit-box;
@@ -2702,7 +2703,7 @@ header {
 
 .tracking__tooltip-block {
   position: absolute;
-  left: -30px;
+  left: -12px;
   top: 31px;
   z-index: 10;
   width: 333px;
@@ -2718,7 +2719,7 @@ header {
   display: block;
   position: absolute;
   top: -6px;
-  left: 32px;
+  left: 14px;
   width: 14px;
   height: 14px;
   background-color: #ffffff;
@@ -2885,6 +2886,7 @@ header {
   margin-bottom: 3px; }
 
 .tracking__add_filled {
+  position: relative;
   display: inline-block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2904,6 +2906,22 @@ header {
   transition: all 0.5s ease;
   outline: none; }
 
+.tracking__add-label_filled {
+  margin-bottom: 0; }
+
+.tracking__add-label_filled::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  right: -11px;
+  display: block;
+  width: 11px;
+  height: 11px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #4bdebe; }
+
 .tracking__add_filled:hover {
   padding-left: 20px;
   width: 81px;
@@ -2921,6 +2939,19 @@ header {
           border-radius: 15px;
   background-color: #f0425e;
   font-size: 10px; }
+
+.tracking__measure-item .tracking__add::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  right: -11px;
+  display: block;
+  width: 11px;
+  height: 11px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #f0425e; }
 
 .tracking__add::before {
   content: '+ ';
@@ -3158,15 +3189,6 @@ header {
         -ms-flex-direction: column;
             flex-direction: column; } }
 
-.fade-block {
-  position: absolute;
-  z-index: 100;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(36, 36, 37, 0.85); }
-
 .motivation__popup.fade {
   -webkit-transform: translate(-50%, -490px) !important;
       -ms-transform: translate(-50%, -490px) !important;
@@ -3180,6 +3202,11 @@ header {
           transform: translate(-50%, -50%) !important; }
 
 .motivation__popup {
+  font-family: BrandonGrotesque;
+  font-weight: 500;
+  font-size: 13px;
+  color: #ffffff;
+  line-height: normal;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -3187,7 +3214,7 @@ header {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 101;
-  padding: 40px 50px !important;
+  padding: 30px !important;
   width: 370px;
   -webkit-border-radius: 2px;
           border-radius: 2px;
@@ -3200,8 +3227,8 @@ header {
   background-color: #283c4b; }
 
 .motivation__popup-title {
-  margin-bottom: 35px;
-  font-size: 30px;
+  margin-bottom: 30px;
+  font-size: 24px;
   text-align: center; }
 
 .motivation__popup-input {
@@ -3215,7 +3242,7 @@ header {
           border-radius: 2px;
   text-align: center;
   outline: none;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 400;
   color: #ffffff; }
 
@@ -3275,7 +3302,7 @@ header {
   -webkit-border-radius: 2px;
           border-radius: 2px;
   color: #283c4b;
-  font-size: 22px;
+  font-size: 18px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
 
