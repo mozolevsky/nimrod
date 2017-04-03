@@ -46,7 +46,7 @@ gulp.task('libsCssMin',  function () {
 });
 
 gulp.task('cssMin',  function () {
-    return gulp.src('app/sass/main.css')
+    return gulp.src('app/css/main.css')
         .pipe(cssnano())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('app/css'))
@@ -91,6 +91,9 @@ gulp.task('build', ['clean', 'img' , 'sass', 'cssMin', 'scripts'], function (){
 
     var buldFonts = gulp.src('app/fonts/**/*')
         .pipe(gulp.dest('dist/fonts'));
+
+    var video = gulp.src('app/video/**/*')
+        .pipe(gulp.dest('dist/video'));
 
     var buildJs = gulp.src('app/js/**/*')
         .pipe(gulp.dest('dist/js'));

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Motivation</title>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/dropzone/dropzone.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="fonts/fonts.css" type="text/css" charset="utf-8" />
+</head>
+<body class="pentagon">
+    <header>
+        <div class="logo-section">
+            <a class="logo-section__link" href="index.html">Home</a>
+            <div class="logo-section__logo-block">
+                <a class="logo-section__logo-img" href="/"></a>
+            </div>
+            <a class="logo-section__link" href="#">Logout</a>
+            <p class="logo-section__mobile-title">Getting started</p>
+            <div class="logo-section__mobile-menu">
+                <div class="logo-section__mobile-dash"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="navigation">
+                <a class="navigation__link navigation__link_fit" href="fitness.html">Fitness</a>
+                <a class="navigation__link navigation__link_nut" href="nutrition.html">Nutrition</a>
+                <a class="navigation__link navigation__link_motiv navigation__link_motiv-active" href="motivation.html">Motivation</a>
+                <a class="navigation__link navigation__link_track" href="tracking.html">Tracking</a>
+                <a class="navigation__link navigation__link_guid" href="guidance.html">Guidance</a>
+            </div>
+        </div>
+    </header>
+        <div class="container motivation__text">
+            <div class="row">
+                <div class="col-md-5 col-sm-5">
+                    <div class="motivation__item motivation__item_why">
+                        <h4 class="motivation__title">What is your WHY?</h4>
+                        <p class="motivation__desc">Ever heard of the Fuller Brush Man? You know, those legendary guys who
+                            came knocking on the front doors of America, selling brushes</p>
+                        <button class="motivation__button motivation__button_why" type="button" data-toggle="modal" data-target="#whyModal">Add why</button>
+                    </div>
+                </div>
+                <div class="col-md-7 col-sm-7">
+                    <div class="motivation__item motivation__item_quote">
+                        <h4 class="motivation__title">Motivational Quote</h4>
+                        <p class="motivation__desc">Ever heard of the Fuller Brush Man? You know, those legendary guys who
+                            came knocking on the front doors of America, selling brushes, mops and cleaners? I was one of
+                            them, back in my early twenties.</p>
+                        <button class="motivation__button motivation__button_quote" type="button" data-toggle="modal" data-target="#quoteModal">Add motivational quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container motivation__video">
+            <h4 class="motivation__title">Motivational Videos</h4>
+            <p class="motivation__desc motivation__desc_video">Ever heard of the Fuller Brush Man? You know, those legendary guys who came
+                knocking on the front doors of</p>
+            <div class="motivation__video-items">
+                <div class="motivation__video-item motivation__video-item_active">
+                    <div class="videocover">
+                        <button class="video-container__button video-container__button_motivation" type="button"></button>
+                    </div>
+                    <video class="video-container__video">
+                        <source src="video/small.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <button class="motivation__video-item motivation__video-item_empty" type="button" data-toggle="modal" data-target="#videoModal"><i class="motivation__add-button motivation__button motivation__button_quote">ADD VIDEO</i></button>
+                <button class="motivation__video-item motivation__video-item_empty" type="button" data-toggle="modal" data-target="#videoModal"><i class="motivation__add-button">ADD VIDEO</i></button>
+                <button class="motivation__video-item motivation__video-item_empty" type="button" data-toggle="modal" data-target="#videoModal"><i class="motivation__add-button">ADD VIDEO</i></button>
+            </div>
+        </div>
+        <div class="container motivation__photo">
+            <h4 class="motivation__title">Your Progress So Far</h4>
+            <p class="motivation__desc motivation__desc_photo">Ever heard of the Fuller Brush Man? You know, those legendary guys who came
+                knocking on the front doors of</p>
+            <div class="motivation__photo-block">
+                <form class="motivation__photo-item dropzone" action="/file-upload">
+                    <h4 class="motivation__title">Front Picture</h4>
+                    <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                    <div class="dz-message" data-dz-message hidden></div>
+                </form>
+                <div class="motivation__line">
+                    <i class="motivation__line-dashed"></i>
+                    <i class="motivation__line-logo"></i>
+                    <i class="motivation__line-solid"></i>
+                </div>
+                <form class="motivation__photo-item dropzone" action="/file-upload">
+                    <h4 class="motivation__title">Front Picture</h4>
+                    <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                    <div class="dz-message" data-dz-message hidden></div>
+                </form>
+            </div>
+        </div>
+    <footer class="footer">
+        <div class="footer__logo">
+            <span class="footer__logo-img">BodyTransformations.com</span>
+        </div>
+        <ul class="footer__nav">
+            <li><a href="#">Terms of use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li>Copyright 2009-2017</li>
+        </ul>
+    </footer>
+
+    <!-- POPUP MOTIVATION WHY -->
+    <div class="fade motivation__popup motivation__popup_why" id="whyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <p class="motivation__popup-title">Popup title</p>
+        <input class="motivation__popup-input" type="tel" placeholder="Why">
+        <button type="button" class="motivation__popup-btn">Send</button>
+        <button class="motivation__popup-close" type="button" data-dismiss="modal"></button>
+    </div>
+
+    <!-- POPUP MOTIVATION QUOTE -->
+    <div class="fade motivation__popup motivation__popup_quote" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <p class="motivation__popup-title">Popup title</p>
+        <input class="motivation__popup-input" type="tel" placeholder="Quote">
+        <button class="motivation__popup-btn">Send</button>
+        <button class="motivation__popup-close" type="button" data-dismiss="modal"></button>
+    </div>
+
+    <!-- POPUP VIDEO DOWNLOAD -->
+    <div class="fade motivation__popup motivation__popup_quote motivation__popup_video" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <p class="motivation__popup-title">Popup title</p>
+        <input class="motivation__popup-input" type="tel" placeholder="Enter URL">
+        <button class="motivation__popup-btn">Send</button>
+        <button class="motivation__popup-close" type="button" data-dismiss="modal"></button>
+    </div>
+
+<script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="libs/dropzone/dropzone.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
