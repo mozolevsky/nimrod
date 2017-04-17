@@ -55,7 +55,7 @@
 }
 .motivation__video-item {
   display: inline-block;
-  flex-basis: 20%;
+  flex-basis: 23%;
   position: relative;
   padding: 0;
   width: 100%;
@@ -116,7 +116,17 @@
   padding: 31px 33px;
   position: relative;
   @extend .motivation__video-item;
+  background-color: rgba(55, 74, 89, 0.85);
 }
+
+.motivation__photo-wrap {
+  background-image: url("../img/human-front.png");
+  background-repeat: no-repeat;
+  background-size: 85%;
+  background-position: center 30px;
+  background-color: $dark-grey-blue-two;
+}
+
 .motivation__photo-item_active {
   display: flex;
   align-items: center;

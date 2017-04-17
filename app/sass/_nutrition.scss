@@ -5,6 +5,17 @@
 
 .nutrition__top-img-block {
   margin-bottom: -80px;
+  position: relative;
+}
+
+.nutrition__top-img-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: inset 0 -50px 37px -30px rgba(0, 0, 0, 0.8);
 }
 
 .nutrition__top-img {
@@ -49,11 +60,13 @@
   background-color: $dark-two;
   opacity: 1;
   @include transition();
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .nutrition__tab-link_intro {
   background-color: $light-indigo;
   @include hover($white);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .nutrition__tabs-content {
