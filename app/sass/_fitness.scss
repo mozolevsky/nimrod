@@ -51,9 +51,14 @@
   background-color: transparent;
 }
 
+.fitness__accordeon-desc {
+  width: 100%;
+}
+
 .fitness__accordeon-title {
   display: inline-block;
   position: relative;
+  z-index: 2;
   width: 100%;
   vertical-align: middle;
   opacity: 0.31;
@@ -149,6 +154,7 @@
   min-height: 116.2px;
   flex: 123px;
   @include transition();
+  border: solid 1px $dark-four;
 }
 
 .accordion-inner__day:hover {
@@ -157,7 +163,7 @@
 
 
 .accordion-inner__day:nth-child(2n+1) {
-  background-color: rgba(36, 54, 68, 0.57);
+  background-color: $dark-four;
 }
 
 .accordion-inner__day-number {
@@ -289,12 +295,11 @@
     margin-right: 0;
     flex: auto;
     background-color: $dark-four;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .accordion-inner__day:nth-child(2n+1) {
-    background-color: $dark-four;
+    background: #243644;
   }
 
   .accordion-inner__day:nth-child(2n) {

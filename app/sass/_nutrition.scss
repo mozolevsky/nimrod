@@ -33,7 +33,9 @@
   letter-spacing: 0.4px;
   opacity: 0.2;
   text-transform: uppercase;
-  padding: 30px 35px;
+  padding: 30px 0;
+  flex-grow: 1;
+  text-align: center;
   margin: 0;
   border: 0;
 }
@@ -132,15 +134,16 @@
   }
 
   .nutrition__tabs {
-    width: 100%;
+    width: auto;
+    margin-left: -32px;
+    margin-right: -32px;
 
   }
 
   .nutrition__tab-link {
     font-size: 10px;
     flex-grow: 1;
-    padding: 25px 3.5vw;
-    text-align: center;
+
   }
 
   .nutrition__tabs-content {

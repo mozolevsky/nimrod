@@ -116,6 +116,8 @@
   padding: 31px 33px;
   position: relative;
   @extend .motivation__video-item;
+  background: rgba(255, 255, 255, 0.2) url('../img/human-half.png') no-repeat center bottom;
+
 }
 .motivation__photo-item_active {
   display: flex;
@@ -332,7 +334,7 @@
   .motivation__photo-item {
     margin-bottom: 0;
     width: auto;
-  }
+   }
 
   .motivation__photo-item::before,
   .motivation__photo-item::after {
