@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="fonts/fonts.css" type="text/css" charset="utf-8" />
 </head>
-<body class="pentagon">
+<body>
+<div class="pentagon">
     <header>
         <div class="logo-section">
             <a class="logo-section__link" href="index.html">Home</a>
@@ -33,68 +34,72 @@
             </div>
         </div>
     </header>
-        <div class="container motivation__text">
-            <div class="row">
-                <div class="col-md-5 col-sm-5">
-                    <div class="motivation__item motivation__item_why">
-                        <h4 class="motivation__title">What is your WHY?</h4>
-                        <p class="motivation__desc">Ever heard of the Fuller Brush Man? You know, those legendary guys who
-                            came knocking on the front doors of America, selling brushes</p>
-                        <button class="motivation__button motivation__button_why" type="button" data-toggle="modal" data-target="#whyModal">Add why</button>
-                    </div>
+    <div class="container motivation__text">
+        <div class="row">
+            <div class="col-md-5 col-sm-5">
+                <div class="motivation__item motivation__item_why">
+                    <h4 class="motivation__title">What is your WHY?</h4>
+                    <p class="motivation__desc">Ever heard of the Fuller Brush Man? You know, those legendary guys who
+                        came knocking on the front doors of America, selling brushes</p>
+                    <button class="motivation__button motivation__button_why" type="button" data-toggle="modal" data-target="#whyModal">Add why</button>
                 </div>
-                <div class="col-md-7 col-sm-7">
-                    <div class="motivation__item motivation__item_quote">
-                        <h4 class="motivation__title">Motivational Quote</h4>
-                        <p class="motivation__desc">Ever heard of the Fuller Brush Man? You know, those legendary guys who
-                            came knocking on the front doors of America, selling brushes, mops and cleaners? I was one of
-                            them, back in my early twenties.</p>
-                        <button class="motivation__button motivation__button_quote" type="button" data-toggle="modal" data-target="#quoteModal">Add motivational quote</button>
-                    </div>
+            </div>
+            <div class="col-md-7 col-sm-7">
+                <div class="motivation__item motivation__item_quote">
+                    <h4 class="motivation__title">Motivational Quote</h4>
+                    <p class="motivation__desc">Ever heard of the Fuller Brush Man? You know, those legendary guys who
+                        came knocking on the front doors of America, selling brushes, mops and cleaners? I was one of
+                        them, back in my early twenties.</p>
+                    <button class="motivation__button motivation__button_quote" type="button" data-toggle="modal" data-target="#quoteModal">Add motivational quote</button>
                 </div>
             </div>
         </div>
-        <div class="container motivation__video">
-            <h4 class="motivation__title">Motivational Videos</h4>
-            <p class="motivation__desc motivation__desc_video">Ever heard of the Fuller Brush Man? You know, those legendary guys who came
-                knocking on the front doors of</p>
-            <div class="motivation__video-items">
-                <div class="motivation__video-item motivation__video-item_active">
-                    <div class="videocover">
-                        <button class="video-container__button video-container__button_motivation" type="button"></button>
-                    </div>
-                    <video class="video-container__video">
-                        <source src="video/small.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+    </div>
+    <div class="container motivation__video">
+        <h4 class="motivation__title">Motivational Videos</h4>
+        <p class="motivation__desc motivation__desc_video">Ever heard of the Fuller Brush Man? You know, those legendary guys who came
+            knocking on the front doors of</p>
+        <div class="motivation__video-items">
+            <div class="motivation__video-item motivation__video-item_active">
+                <div class="videocover">
+                    <button class="video-container__button video-container__button_motivation" type="button"></button>
                 </div>
-                <button class="motivation__video-item motivation__video-item_empty" type="button" data-toggle="modal" data-target="#videoModal"><i class="motivation__add-button motivation__button motivation__button_quote">ADD VIDEO</i></button>
-                <button class="motivation__video-item motivation__video-item_empty" type="button" data-toggle="modal" data-target="#videoModal"><i class="motivation__add-button">ADD VIDEO</i></button>
-                <button class="motivation__video-item motivation__video-item_empty" type="button" data-toggle="modal" data-target="#videoModal"><i class="motivation__add-button">ADD VIDEO</i></button>
+                <video class="video-container__video">
+                    <source src="video/small.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
+            <button class="motivation__video-item motivation__video-item_empty" type="button" data-toggle="modal" data-target="#videoModal"><i class="motivation__add-button motivation__button motivation__button_quote">ADD VIDEO</i></button>
+            <button class="motivation__video-item motivation__video-item_empty" type="button" data-toggle="modal" data-target="#videoModal"><i class="motivation__add-button">ADD VIDEO</i></button>
+            <button class="motivation__video-item motivation__video-item_empty" type="button" data-toggle="modal" data-target="#videoModal"><i class="motivation__add-button">ADD VIDEO</i></button>
         </div>
-        <div class="container motivation__photo">
-            <h4 class="motivation__title">Your Progress So Far</h4>
-            <p class="motivation__desc motivation__desc_photo">Ever heard of the Fuller Brush Man? You know, those legendary guys who came
-                knocking on the front doors of</p>
-            <div class="motivation__photo-block">
-                <form class="motivation__photo-item dropzone" action="/file-upload">
-                    <h4 class="motivation__title">Front Picture</h4>
-                    <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
-                    <div class="dz-message" data-dz-message hidden></div>
-                </form>
-                <div class="motivation__line">
-                    <i class="motivation__line-dashed"></i>
-                    <i class="motivation__line-logo"></i>
-                    <i class="motivation__line-solid"></i>
-                </div>
+    </div>
+    <div class="container motivation__photo">
+        <h4 class="motivation__title">Your Progress So Far</h4>
+        <p class="motivation__desc motivation__desc_photo">Ever heard of the Fuller Brush Man? You know, those legendary guys who came
+            knocking on the front doors of</p>
+        <div class="motivation__photo-block">
+            <div class="motivation__photo-wrap">
                 <form class="motivation__photo-item dropzone" action="/file-upload">
                     <h4 class="motivation__title">Front Picture</h4>
                     <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
                     <div class="dz-message" data-dz-message hidden></div>
                 </form>
             </div>
+            <div class="motivation__line">
+                <i class="motivation__line-dashed"></i>
+                <i class="motivation__line-logo"></i>
+                <i class="motivation__line-solid"></i>
+            </div>
+            <div class="motivation__photo-wrap">
+                <form class="motivation__photo-item dropzone" action="/file-upload">
+                    <h4 class="motivation__title">Front Picture</h4>
+                    <p class="motivation__desc motivation__desc_photo-item">Ever heard of the Fuller Brush Man? You know, those legendary guys</p>
+                    <div class="dz-message" data-dz-message hidden></div>
+                </form>
+            </div>
         </div>
+    </div>
     <footer class="footer">
         <div class="footer__logo">
             <span class="footer__logo-img">BodyTransformations.com</span>
@@ -131,6 +136,7 @@
         <button class="motivation__popup-btn">Send</button>
         <button class="motivation__popup-close" type="button" data-dismiss="modal"></button>
     </div>
+</div>
 
 <script src="libs/jquery/dist/jquery.min.js"></script>
 <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>

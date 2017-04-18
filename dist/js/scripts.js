@@ -7,7 +7,11 @@ document.body.addEventListener('click', function (e) {
         var video = target.parentElement.parentElement.querySelector('.video-container__video');
         var cover = target.parentElement.parentElement.querySelector('.videocover');
 
-        video.setAttribute("controls", true);
+        if (video.getAttribute("data-control") !== null) {
+            console.log('Тут нужно скрыть контролы');
+        } else {
+            video.setAttribute("controls", true);
+        }
         video.play();
         cover.setAttribute("style", 'visibility: hidden');
      }
