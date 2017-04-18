@@ -55,7 +55,7 @@
 }
 .motivation__video-item {
   display: inline-block;
-  flex-basis: 20%;
+  flex-basis: 23%;
   position: relative;
   padding: 0;
   width: 100%;
@@ -117,8 +117,12 @@
   position: relative;
   @extend .motivation__video-item;
   background: rgba(255, 255, 255, 0.2) url('../img/human-half.png') no-repeat center bottom;
-
 }
+
+.motivation__photo-wrap {
+  background-color: $dark-grey-blue-two;
+}
+
 .motivation__photo-item_active {
   display: flex;
   align-items: center;
@@ -293,7 +297,7 @@
     min-height: 191px;
   }
   .motivation__video-item.motivation__video-item_active {
-    min-height: auto;
+    height: auto;
   }
 
   .motivation__video-item_empty {
@@ -313,7 +317,7 @@
   .motivation__add-button {
     @include elemToCenter;
     @include brandonFont(700, 14px);
-    letter-spacing: 0.4;
+    letter-spacing: 0.4px;
     font-style: normal;
     display: block;
     width: 138px;
@@ -376,8 +380,7 @@
     flex-basis: 284px;
     justify-content: center;
   }
-  .mot
-  ivation__photo-item_active img {
+  .motivation__photo-item_active img {
     height: 100%;
     width: auto;
   }

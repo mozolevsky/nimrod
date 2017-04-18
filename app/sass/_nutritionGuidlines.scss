@@ -1,6 +1,7 @@
 .nutrition__tab-link_guidlines {
   background-color: $azure;
   @include hover($white);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .nutrition__sub-title {

@@ -1,6 +1,7 @@
 .nutrition__tab-link_meals {
   background-color: $aqua-marine;
   @include hover($white);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .nutrition__desc-bigSize {
