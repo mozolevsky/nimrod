@@ -1,10 +1,37 @@
 var body = document.querySelector('.tracking');
 var inputs = document.querySelectorAll('.tracking__add_filled');
+var buttons = document.querySelectorAll('.tracking__add');
 
-body.addEventListener('click', function (event) {
-    var className = event.target.className;
-    if (className === "tracking__add") addButtonHandler(event.target);
-});
+for (var i = 0; i < buttons.length; i++) {
+
+    buttons[i].addEventListener('click', function (event) {
+        addButtonHandler(event.target);
+        var elem;
+
+        if (event.target.nextElementSibling.childNodes[0]) {
+            elem  = event.target.nextElementSibling.childNodes[0];
+        } else {
+            elem = event.target.nextElementSibling;
+        }
+
+        elem.focus();
+        elem.onblur = function () {
+            if (elem.value) {
+                elem.classList.add('tracking__add_filled-text');
+            } else {
+                elem.classList.remove('tracking__add_filled-text');
+                addButtonHandler(event.target);
+            }
+        }
+    });
+
+    for (var j = 0; j < inputs.length; j++) {
+        if (inputs[j].value) {
+            inputs[j].classList.add('tracking__add_filled-text');
+        }
+    };
+
+};
 
 var addButtonHandler = function (elem) {
     visibilityHandler(elem);
