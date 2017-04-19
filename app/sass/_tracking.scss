@@ -1,13 +1,21 @@
 .tracking__nav {
+  width: 90%;
   display: flex;
   justify-content: space-between;
-  padding-top: 16px;
-  padding-bottom: 14px;
+  margin: 15px auto;
+  background-color: rgba(27, 38, 47, 0.35);
+}
+
+
+.tracking__pictures_nav {
+  width: 100%;
+  position: relative;
 }
 
 .tracking__nav-control {
-  position: relative;
+  position: absolute;
   width: 42px;
+  height: 52px;
   background-color: rgba(27, 38, 47, 0.35);
   cursor: pointer;
 }
@@ -16,39 +24,50 @@
   content: '';
   @include elemToCenter;
   margin-top: -4px;
-  margin-left: -2px;
   width: 9px;
   height: 9px;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   border-left: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.tracking__nav-control_prev::before {
   transform: rotate(-45deg);
+  margin-left: -2px;
 }
 
 .tracking__nav-control_next::before {
-  transform: rotate(135deg);
-  margin-left: -6px;
+  transform: rotate(135deg) translate(50%, 50%);
+  margin-right: 2px;
 }
 
 .tracking__nav-body {
-  flex-wrap: wrap;
-  display: flex;
-  flex-grow: 1;
-  justify-content: flex-start;
-  list-style: none;
-  margin: 0 6px;
-  padding: 8px 27px;
-  background-color: rgba(27, 38, 47, 0.35);
+  padding: 8px 0;
   border-radius: 2px;
-
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .tracking__nav-item {
-  padding: 8px 15px;
-  @include brandonFont(700, 14px, #ffffff, 20px);
+  @include brandonFont(700, 14px, #ffffff, 36px);
   letter-spacing: 0.4px;
+  vertical-align: middle;
   color: rgba(255, 255, 255, 0.2);
   text-transform: uppercase;
   cursor: pointer;
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  @include transition();
+}
+
+.tracking__nav-item:hover {
+  color: $white;
+  text-decoration: none;
+}
+
+.tracking__nav-item:first-child {
+  margin-left: 10px;
 }
 
 .tracking__nav-item_active {
@@ -57,6 +76,24 @@
   color: rgba(255, 255, 255, 1);
   border-radius: 2px;
   cursor: default;
+  @include transition();
+}
+
+.tracking__nav-item_active:hover {
+  cursor: pointer;
+  color: $white;
+  text-decoration: none;
+  transform: scale(1.02);
+}
+
+.tracking__nav-control_next {
+  right: 0;
+  top: 0;
+}
+
+.tracking__nav-control_prev {
+  left: 0;
+  top: 0;
 }
 
 
@@ -77,11 +114,25 @@
   padding: 31px 33px;
   position: relative;
   @extend .motivation__video-item;
+  background-repeat: no-repeat;
+  background-position: center bottom;
 }
 
 .tracking__pictures-item::before,
 .tracking__pictures-item::after {
   top: 50%;
+}
+
+.tracking__pictures-item_front {
+  background-image: url('../img/human-half_front.png');
+}
+
+.tracking__pictures-item_side {
+  background-image: url('../img/human-half_side.png');
+}
+
+.tracking__pictures-item_back {
+  background-image: url('../img/human-half_back.png');
 }
 
 /*tooltip*/
@@ -361,6 +412,9 @@
   padding: 16px 43px;
   margin-bottom: 58px;
   background-color: rgba(43, 64, 77, 0.6);
+  background-image: url('../img/human.png');
+  background-repeat: no-repeat;
+  background-position: center;
   border: 1px dashed #476d89;
 }
 
@@ -421,7 +475,7 @@
 
 .tracking__measure-item_forearms {
   top: 233px;
-  left: 388px;
+  left: 384px;
 }
 
 .tracking__measure-item_waist {
@@ -448,8 +502,11 @@
     padding: 8px;
   }
 
+  .tracking__nav-control {
+    width: 30px;
+  }
+
   .tracking__nav-item {
-    padding: 8px;
     font-size: 13px;
   }
 
@@ -472,8 +529,7 @@
 
 @media (max-width: $break-small) {
   .container.tracking {
-    margin-left: -15px;
-    padding-right: 17px;
+
   }
 
   .tracking__pictures {
@@ -481,22 +537,22 @@
   }
 
   .tracking__pictures_nav {
-    margin: 0 -17px;
+    margin: 0 -32px;
     padding: 0 32px;
+    width: calc(100% + 64px);
     background-color: $dark-grey-blue-two;
     overflow: hidden;
   }
 
   .tracking__nav {
-    padding-bottom: 25px;
+    width: auto;
+    margin: 15px -32px;
   }
 
   .tracking__nav-body {
     margin: 0 -40px;
     padding: 13px 40px;
-    display: block;
-    white-space: nowrap;
-    overflow: auto;
+
   }
 
   .tracking__nav-body::-webkit-scrollbar {
@@ -507,7 +563,6 @@
     min-width: 70px;
     border-radius: 25px;
     margin-right: 11px;
-    margin-left: 10px;
     margin-bottom: 20px;
     margin-top: 15px;
     text-align: center;
@@ -520,8 +575,8 @@
     color: rgba(255, 255, 255, 1);
   }
 
-    .tracking__pictures {
-    display: flex;
+  .tracking__pictures {
+
   }
 
   .tracking__pictures-item .tracking__tooltip {
@@ -530,11 +585,14 @@
 
   .tracking__pictures-item {
     width: auto;
-    height: 223px;
   }
 
   .tracking__nav-control {
     display: none;
+  }
+
+  .tracking__measure {
+    background-image: none;
   }
 
   .tracking__measure-item {
@@ -542,8 +600,9 @@
   }
 
   .tracking__sum {
-    padding: 29px 34px;
+    padding: 29px 32px;
     background-color: $dark-grey-blue;
+    margin: 0 -32px
   }
 
   .tracking__sum-item {
@@ -568,8 +627,8 @@
   }
 
   .tracking__score {
-    padding-right: 33px;
-    margin-bottom: 0;
+    padding-right: 32px;
+    margin: 0 -32px;
     padding-bottom: 44px;
     border: none;
     background-color: $dark;
@@ -606,7 +665,7 @@
   .tracking__measure {
     min-height: 0;
     padding: 0 32px;
-    margin-bottom: 32px;
+    margin: 0 -32px 32px -32px;
     border: none;
     background-color: $dark;
   }
@@ -637,10 +696,6 @@
     color: $lightish-purple;
   }
 
-  .tracking__pictures_nav .swiper-slide .row {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 
