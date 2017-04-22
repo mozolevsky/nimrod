@@ -379,11 +379,19 @@ header {
 
 .tools__img {
   width: 40%;
-  height: 178px; }
+  height: 178px;
+  overflow: hidden; }
 
 .tools__img img {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.tools__img img:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1); }
 
 .tools__desc {
   padding: 20px 18px;
@@ -872,8 +880,8 @@ header {
   bottom: 0;
   left: 0;
   right: 0;
-  -webkit-box-shadow: inset 0 -50px 37px -30px rgba(0, 0, 0, 0.8);
-          box-shadow: inset 0 -50px 37px -30px rgba(0, 0, 0, 0.8); }
+  -webkit-box-shadow: inset 0 -80px 80px -40px rgba(0, 0, 0, 0.8);
+          box-shadow: inset 0 -80px 80px -40px rgba(0, 0, 0, 0.8); }
 
 .nutrition__top-img {
   margin: 0 auto;
@@ -1009,6 +1017,9 @@ header {
     margin-left: -32px;
     margin-right: -32px;
     margin-bottom: 0; }
+  .nutrition__top-img-block::before {
+    -webkit-box-shadow: none;
+            box-shadow: none; }
   .nutrition__top-img {
     height: 212px; }
   .nutrition__nav-wrapper {
@@ -3111,22 +3122,95 @@ header {
   position: absolute; }
 
 .tracking__measure-item .tracking__title {
+  position: relative; }
+
+.tracking__measure-item .tracking__title::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100%; }
+
+.tracking__measure-item_chest .tracking__title::before {
+  top: 12px;
+  left: 142px;
+  width: 240px;
+  height: 196px;
+  background-image: url("../img/chest.png"); }
+
+.tracking__measure-item_arms .tracking__title::before {
+  top: 12px;
+  left: 136px;
+  width: 120px;
+  height: 84px;
+  background-image: url("../img/arms.png"); }
+
+.tracking__measure-item_stomach .tracking__title::before {
+  top: 12px;
+  left: 162px;
+  width: 172px;
+  height: 124px;
+  background-image: url("../img/stomach.png"); }
+
+.tracking__measure-item_hips .tracking__title::before {
+  top: -30px;
+  left: 133px;
+  width: 184px;
+  height: 124px;
+  background-image: url("../img/hips.png"); }
+
+.tracking__measure-item_abductors .tracking__title::before {
+  top: -108px;
+  left: 175px;
+  width: 180px;
+  height: 184px;
+  background-image: url("../img/abductors.png"); }
+
+.tracking__measure-item_forearms .tracking__title::before {
+  top: 12px;
+  left: -160px;
+  width: 155px;
+  height: 184px;
+  background-image: url("../img/forearms.png"); }
+
+.tracking__measure-item_waist .tracking__title::before {
+  top: 8px;
+  left: -168px;
+  width: 165px;
+  height: 184px;
+  background-image: url("../img/waist.png"); }
+
+.tracking__measure-item_legs .tracking__title::before {
+  top: -25px;
+  left: -170px;
+  width: 165px;
+  height: 184px;
+  background-image: url("../img/legs.png"); }
+
+.tracking__measure-item_calves .tracking__title::before {
+  top: 12px;
+  left: -162px;
+  width: 155px;
+  height: 184px;
+  background-image: url("../img/calves.png"); }
+
+.tracking__measure-item .tracking__title {
   margin-right: 10px; }
 
 .tracking__measure-item_chest {
-  top: 66px;
+  top: 55px;
   left: -200px; }
 
 .tracking__measure-item_arms {
-  top: 142px;
+  top: 125px;
   left: -156px; }
 
 .tracking__measure-item_stomach {
-  top: 216px;
+  top: 195px;
   left: -148px; }
 
 .tracking__measure-item_hips {
-  top: 342px;
+  top: 310px;
   left: -166px; }
 
 .tracking__measure-item_abductors {
@@ -3134,20 +3218,20 @@ header {
   left: -208px; }
 
 .tracking__measure-item_forearms {
-  top: 233px;
-  left: 384px; }
+  top: 205px;
+  left: 424px; }
 
 .tracking__measure-item_waist {
-  top: 328px;
-  left: 353px; }
+  top: 305px;
+  left: 380px; }
 
 .tracking__measure-item_legs {
   top: 430px;
-  left: 358px; }
+  left: 375px; }
 
 .tracking__measure-item_calves {
-  top: 530px;
-  left: 339px; }
+  top: 495px;
+  left: 365px; }
 
 .invisible {
   display: none; }
@@ -3166,7 +3250,36 @@ header {
   .tracking__measure {
     padding: 16px; }
   .tracking__measure-block {
-    width: 325px; } }
+    width: 325px; }
+  .tracking__measure-item_chest .tracking__title::before {
+    width: 225px; }
+  .tracking__measure-item_arms .tracking__title::before {
+    width: 105px; }
+  .tracking__measure-item_stomach .tracking__title::before {
+    width: 157px; }
+  .tracking__measure-item_hips .tracking__title::before {
+    width: 169px; }
+  .tracking__measure-item_abductors .tracking__title::before {
+    top: -100px;
+    width: 165px; }
+  .tracking__measure-item_forearms .tracking__title::before {
+    left: -125px;
+    width: 120px;
+    background-size: 120%; }
+  .tracking__measure-item .tracking__title {
+    margin-right: 10px; }
+  .tracking__measure-item_abductors {
+    left: -200px; }
+  .tracking__measure-item_forearms {
+    top: 230px;
+    left: 380px; }
+  .tracking__measure-item_waist {
+    left: 365px; }
+  .tracking__measure-item_legs {
+    top: 415px;
+    left: 365px; }
+  .tracking__measure-item_calves {
+    left: 345px; } }
 
 @media (max-width: 767px) {
   .tracking__pictures {
@@ -3209,6 +3322,8 @@ header {
     background-image: none; }
   .tracking__measure-item {
     position: static; }
+  .tracking__measure-item .tracking__title::before {
+    display: none; }
   .tracking__sum {
     padding: 29px 32px;
     background-color: #283c4b;
@@ -3258,7 +3373,7 @@ header {
   .tracking__measure {
     min-height: 0;
     padding: 0 32px;
-    margin: 0 -32px 32px -32px;
+    margin: 0 -32px 0 -32px;
     border: none;
     background-color: #19242c; }
   .tracking__measure-block {
@@ -3290,7 +3405,11 @@ header {
     background-color: #ffffff;
     color: #8e4bec; }
   .tracking__measure .tracking__add::before {
-    color: #8e4bec; } }
+    color: #8e4bec; }
+  .tracking__add-label_filled::after {
+    display: none; }
+  .tracking__measure-item .tracking__add::after {
+    display: none; } }
 
 .motivation__popup.fade {
   -webkit-transform: translate(-50%, -490px) !important;
@@ -3448,8 +3567,8 @@ header {
             transform: translate(0, 0) !important; } }
 
 body {
-  background-image: -webkit-radial-gradient(42% 29%, circle, #385060, #19242c);
-  background-image: radial-gradient(circle at 42% 29%, #385060, #19242c);
+  background-image: -webkit-radial-gradient(42% 29%, circle, #1A2933, #19242c);
+  background-image: radial-gradient(circle at 42% 29%, #1A2933, #19242c);
   font-family: AvenirNext;
   font-weight: 500;
   font-size: 13px;
@@ -3458,8 +3577,8 @@ body {
   position: relative; }
 
 .getting-started {
-  background-image: -webkit-radial-gradient(42% -129%, circle, #385060, #19242c);
-  background-image: radial-gradient(circle at 42% -129%, #385060, #19242c); }
+  background-image: -webkit-radial-gradient(42% -129%, circle, #1A2933, #19242c);
+  background-image: radial-gradient(circle at 42% -129%, #1A2933, #19242c); }
 
 .pentagon {
   width: 100%;

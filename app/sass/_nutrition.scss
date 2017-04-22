@@ -15,7 +15,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  box-shadow: inset 0 -50px 37px -30px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 -80px 80px -40px rgba(0, 0, 0, 0.8);
 }
 
 .nutrition__top-img {
@@ -132,11 +132,15 @@
 @media (max-width: $break-small) {
 
   .nutrition__top-img-block {
-       width: calc(100% + 64px);
-       margin-left: -32px;
-       margin-right: -32px;
-       margin-bottom: 0;
-     }
+    width: calc(100% + 64px);
+    margin-left: -32px;
+    margin-right: -32px;
+    margin-bottom: 0;
+  }
+
+  .nutrition__top-img-block::before {
+    box-shadow: none;
+  }
 
   .nutrition__top-img {
     height: 212px;
