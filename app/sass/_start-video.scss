@@ -132,7 +132,11 @@
 
 @media (max-width: $break-medium) {
   .start-here::after {
-    display: none;
+    background-image: url("../img/start_here_mobile.png");
+    left: 79%;
+    top: -90px;
+    width: 60px;
+    height: 80px;
   }
 }
 

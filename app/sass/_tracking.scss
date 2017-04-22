@@ -7,7 +7,6 @@
   background-color: rgba(0, 0, 0, 0.15);
 }
 
-
 .tracking__pictures_nav {
   width: 100%;
   position: relative;
@@ -376,7 +375,6 @@
   content: '';
   position: absolute;
   top: 50%;
-  margin-top: -5px;
   right: -11px;
   display: block;
   width: 11px;
@@ -386,8 +384,8 @@
 }
 
 .tracking__add_filled-text:hover {
-  padding-left: 20px;
-  width: 81px;
+  padding-left: 15px;
+  width: 74px;
   background-image: url("../img/pen_icon.png");
   background-repeat: no-repeat;
   background-size: 15%;
@@ -408,7 +406,6 @@
   content: '';
   position: absolute;
   top: 50%;
-  margin-top: -5px;
   right: -11px;
   display: block;
   width: 11px;
@@ -476,42 +473,92 @@
 
 .tracking__measure-item_chest .tracking__title::before {
   top: 12px;
-  left: 142px;
-  width: 240px;
+  left: 130px;
+  width: 250px;
   height: 196px;
   background-image: url("../img/chest.png");
 }
 
+.tracking__measure-item_chest .tracking__add::after {
+  top: 113px;
+  left: 373px;
+}
+
+.tracking__measure-item_chest .tracking__add-label_filled::after {
+  top: 113px;
+  left: 373px;
+}
+
 .tracking__measure-item_arms .tracking__title::before {
   top: 12px;
-  left: 136px;
+  left: 126px;
   width: 120px;
   height: 84px;
   background-image: url("../img/arms.png");
 }
 
+.tracking__measure-item_arms .tracking__add::after {
+  top: 62px;
+  left: 245px;
+}
+
+.tracking__measure-item_arms .tracking__add-label_filled::after {
+  top: 62px;
+  left: 245px;
+}
+
 .tracking__measure-item_stomach .tracking__title::before {
   top: 12px;
-  left: 162px;
+  left: 152px;
   width: 172px;
   height: 124px;
   background-image: url("../img/stomach.png");
 }
 
+.tracking__measure-item_stomach .tracking__add::after {
+  top: 75px;
+  left: 320px;
+}
+
+.tracking__measure-item_stomach .tracking__add-label_filled::after{
+  top: 75px;
+  left: 320px;
+}
+
 .tracking__measure-item_hips .tracking__title::before {
-  top: -30px;
-  left: 133px;
+  top: -24px;
+  left: 120px;
   width: 184px;
   height: 124px;
   background-image: url("../img/hips.png");
 }
 
+.tracking__measure-item_hips .tracking__add::after {
+  top: -16px;
+  left: 295px;
+}
+
+.tracking__measure-item_hips .tracking__add-label_filled::after {
+  top: -16px;
+  left: 295px;
+}
+
 .tracking__measure-item_abductors .tracking__title::before {
   top: -108px;
-  left: 175px;
+  left: 163px;
   width: 180px;
   height: 184px;
   background-image: url("../img/abductors.png");
+}
+
+.tracking__measure-item_abductors .tracking__add::after {
+  top: -105px;
+  left: 340px;
+}
+
+.tracking__measure-item_abductors .tracking__add-label_filled::after {
+  top: -105px;
+  left: 340px;
 }
 
 .tracking__measure-item_forearms .tracking__title::before {
@@ -522,6 +569,16 @@
   background-image: url("../img/forearms.png");
 }
 
+.tracking__measure-item_forearms .tracking__add::after {
+  top: 47px;
+  left: -165px;
+}
+
+.tracking__measure-item_forearms .tracking__add-label_filled::after {
+  top: 47px;
+  left: -165px;
+}
+
 .tracking__measure-item_waist .tracking__title::before {
   top: 8px;
   left: -168px;
@@ -530,12 +587,32 @@
   background-image: url("../img/waist.png");
 }
 
+.tracking__measure-item_waist .tracking__add::after {
+  top: 18px;
+  left: -170px;
+}
+
+.tracking__measure-item_waist .tracking__add-label_filled::after {
+  top: 18px;
+  left: -170px;
+}
+
 .tracking__measure-item_legs .tracking__title::before {
-  top: -25px;
+  top: -20px;
   left: -170px;
   width: 165px;
   height: 184px;
   background-image: url("../img/legs.png");
+}
+
+.tracking__measure-item_legs .tracking__add::after {
+  top: -13px;
+  left: -172px;
+}
+
+.tracking__measure-item_legs .tracking__add-label_filled::after {
+  top: -13px;
+  left: -172px;
 }
 
 .tracking__measure-item_calves .tracking__title::before {
@@ -544,6 +621,16 @@
   width: 155px;
   height: 184px;
   background-image: url("../img/calves.png");
+}
+
+.tracking__measure-item_calves .tracking__add::after {
+  top: 46px;
+  left: -172px;
+}
+
+.tracking__measure-item_calves .tracking__add-label_filled::after {
+  top: 46px;
+  left: -172px;
 }
 
 .tracking__measure-item .tracking__title {
@@ -632,16 +719,54 @@
     width: 225px;
   }
 
+  .tracking__measure-item_chest .tracking__add::after {
+    top: 111px;
+    left: 356px;
+  }
+
+  .tracking__measure-item_chest .tracking__add-label_filled::after {
+    top: 111px;
+    left: 356px;
+  }
+
   .tracking__measure-item_arms .tracking__title::before {
     width: 105px;
+  }
+
+  .tracking__measure-item_arms .tracking__add::after {
+    top: 56px;
+    left: 227px;
+  }
+
+  .tracking__measure-item_arms .tracking__add-label_filled::after {
+    top: 56px;
+    left: 227px;
   }
 
   .tracking__measure-item_stomach .tracking__title::before {
     width: 157px;
   }
 
+  .tracking__measure-item_stomach .tracking__add::after {
+    left: 307px;
+  }
+
+  .tracking__measure-item_stomach .tracking__add-label_filled::after {
+    left: 307px;
+  }
+
   .tracking__measure-item_hips .tracking__title::before {
     width: 169px;
+  }
+
+  .tracking__measure-item_hips .tracking__add::after {
+    top: -20px;
+    left: 285px;
+  }
+
+  .tracking__measure-item_hips .tracking__add-label_filled::after {
+    top: -20px;
+    left: 285px;
   }
 
   .tracking__measure-item_abductors .tracking__title::before {
@@ -649,10 +774,28 @@
     width: 165px;
   }
 
+  .tracking__measure-item_abductors .tracking__add::after {
+    top: -95px;
+    left: 323px;
+  }
+
+  .tracking__measure-item_abductors .tracking__add-label_filled::after {
+    top: -95px;
+    left: 323px;
+  }
+
   .tracking__measure-item_forearms .tracking__title::before {
     left: -125px;
     width: 120px;
     background-size: 120%;
+  }
+
+  .tracking__measure-item_forearms .tracking__add::after {
+    left: -128px;
+  }
+
+  .tracking__measure-item_forearms .tracking__add-label_filled::after {
+    left: -128px;
   }
 
   .tracking__measure-item .tracking__title {

@@ -91,6 +91,10 @@
   line-height: 19px;
 }
 
+.fitness__accordeon-text_inner {
+  display: none;
+}
+
 .fitness__accordeon-container {
   border: 0!important;
 }
@@ -249,6 +253,14 @@
 
   .fitness__accordeon-text {
     display: none;
+  }
+
+  .fitness__accordeon-text_inner {
+    display: block;
+    padding: 20px 30px;
+    opacity: 0.7;
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .fitness__accordeon-img {
