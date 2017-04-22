@@ -65,10 +65,11 @@
   color: rgba(255, 255, 255, 0.3);
 }
 
-.nutrition__tab-link_intro {
+.nutrition__tab-link_intro,
+.nutrition__tab-link_intro:hover {
   background-color: $light-indigo;
-  @include hover($white);
   color: rgba(0, 0, 0, 0.4);
+  cursor: default;
 }
 
 .nutrition__tabs-content {

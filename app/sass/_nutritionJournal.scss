@@ -2,9 +2,11 @@
   padding-bottom: 47px;
 }
 
-.nutrition__tab-link_journal {
+.nutrition__tab-link_journal,
+.nutrition__tab-link_journal:hover {
   background-color: $dodger-blue;
   color: rgba(0, 0, 0, 0.4);
+  cursor: default;
 }
 
 .journal__title {

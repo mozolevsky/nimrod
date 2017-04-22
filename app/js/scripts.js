@@ -57,18 +57,32 @@ makeTabs('.transform__block', '.transform__tabs-container', 'transform__letter_a
 
 
 /* the movement of the arrows function in accordions on the fitness page */
-function moveArrow(mainArea, arrowParentNode, arrowClass, turnedClass) {
+function moveArrow(mainArea, arrowParentNode, arrowClass, turnedClass, clear) {
     if (mainArea) {
         mainArea.addEventListener('click', function(e) {
             var target = e.target;
 
-            while (target.className !== mainArea.className) {
+           var clearTurnedArrows = function() {
+               var arrowsDefault = document.querySelectorAll('.' + arrowClass);
+               [].forEach.call(arrowsDefault, function(arrowElem) {
+                   if (arrowElem.matches('.' + turnedClass)) {
+                       arrowElem.classList.remove(turnedClass);
+                   }
+               });
+           };
 
+            while (target.className !== mainArea.className) {
                 if (target.className.indexOf(arrowParentNode) !== -1) {
                     var arrow = target.querySelector('.' + arrowClass);
                     if (arrow.className.indexOf(turnedClass) == -1) {
+                        if (clear) {
+                            clearTurnedArrows();
+                        }
                         arrow.classList.add(turnedClass);
                     } else {
+                        if (clear) {
+                            clearTurnedArrows();
+                        }
                         arrow.classList.remove(turnedClass);
                     }
                     break;
@@ -81,7 +95,7 @@ function moveArrow(mainArea, arrowParentNode, arrowClass, turnedClass) {
 
 /* moving arrows in accordions on the fitness page*/
 var fitness = document.querySelector('.fitness');
-moveArrow(fitness, 'panel-heading', 'fitness__accordeon-arrow', 'arrow-turned');
+moveArrow(fitness, 'panel-heading', 'fitness__accordeon-arrow', 'arrow-turned', 'clear');
 
 var accordion2 = document.getElementById('accordion2');
 moveArrow(accordion2, 'accordion-inner__header', 'accordion-inner__arrow', 'accordion-inner__arrow_turned');

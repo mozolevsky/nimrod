@@ -1,6 +1,8 @@
-.nutrition__tab-link_foodlist {
+.nutrition__tab-link_foodlist,
+.nutrition__tab-link_foodlist:hover {
   background-color: $red-pink;
   color: rgba(0, 0, 0, 0.4);
+  cursor: default;
 }
 
 .foodlist__content-wrapper {

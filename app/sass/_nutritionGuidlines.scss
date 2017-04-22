@@ -1,8 +1,10 @@
-.nutrition__tab-link_guidlines {
-  background-color: $azure;
-  @include hover($white);
+.nutrition__tab-link_guidlines,
+.nutrition__tab-link_guidlines:hover{
+  background-color: $kivi-green;
   color: rgba(0, 0, 0, 0.4);
+  cursor: default;
 }
+
 
 .nutrition__sub-title {
   @include brandonFont(bold, 18px);
