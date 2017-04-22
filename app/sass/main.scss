@@ -19,13 +19,13 @@
 
 
 body {
-  background-image: radial-gradient(circle at 42% 29%, #385060, $dark);
+  background-image: radial-gradient(circle at 42% 29%, #1A2933, $dark);
   @include avenirFont();
   position: relative;
 }
 
 .getting-started {
-  background-image: radial-gradient(circle at 42% -129%, #385060, $dark);
+  background-image: radial-gradient(circle at 42% -129%, #1A2933, $dark);
 }
 
 .pentagon {
