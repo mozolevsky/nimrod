@@ -365,6 +365,9 @@
   text-align: center;
   @include transition;
   outline: none;
+  background-size: 10px;
+  background-position: 90% center;
+  color: $cerulean-blue;
 }
 
 .tracking__add-label_filled {
@@ -684,6 +687,22 @@
 
 .invisible {
   display: none;
+}
+
+.tracking__add_filled-valid {
+  background-image: url("../img/icons/blue-check-icon.png");
+  padding-right: 10px;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: 90% center;
+}
+
+.tracking__add_filled-invalid {
+  background-image: url("../img/icons/red-cross-icon.png");
+  padding-right: 10px;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: 90% center;
 }
 
 @media (max-width: $break-medium) {

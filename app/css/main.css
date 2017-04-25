@@ -2196,7 +2196,8 @@ header {
   border: solid 1px #243644; }
 
 .accordion-inner__day:hover {
-  background: url("../img/152x116.png"); }
+  background: url("../img/calendar_default.jpg");
+  background-size: 100%; }
 
 .accordion-inner__day:hover .accordion-inner__wrap {
   background-color: rgba(0, 0, 0, 0.2); }
@@ -3107,7 +3108,10 @@ header {
   text-align: center;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  outline: none; }
+  outline: none;
+  background-size: 10px;
+  background-position: 90% center;
+  color: #0083f5; }
 
 .tracking__add-label_filled {
   margin-bottom: 0; }
@@ -3383,6 +3387,20 @@ header {
 
 .invisible {
   display: none; }
+
+.tracking__add_filled-valid {
+  background-image: url("../img/icons/blue-check-icon.png");
+  padding-right: 10px;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: 90% center; }
+
+.tracking__add_filled-invalid {
+  background-image: url("../img/icons/red-cross-icon.png");
+  padding-right: 10px;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: 90% center; }
 
 @media (max-width: 991px) {
   .tracking__nav-body {
@@ -3755,6 +3773,9 @@ body {
   color: #ffffff;
   line-height: normal;
   position: relative; }
+
+label {
+  margin-bottom: 0; }
 
 .getting-started {
   background-image: -webkit-radial-gradient(42% -129%, circle, #1A2933, #19242c);

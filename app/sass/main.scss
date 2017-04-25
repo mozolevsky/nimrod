@@ -24,6 +24,10 @@ body {
   position: relative;
 }
 
+label {
+  margin-bottom: 0;
+}
+
 .getting-started {
   background-image: radial-gradient(circle at 42% -129%, #1A2933, $dark);
 }
