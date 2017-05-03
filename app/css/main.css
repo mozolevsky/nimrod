@@ -2718,6 +2718,7 @@ header {
   margin-right: 2px; }
 
 .tracking__nav-body {
+  opacity: 1;
   padding: 8px 0;
   -webkit-border-radius: 2px;
           border-radius: 2px;
@@ -2725,56 +2726,36 @@ header {
           box-sizing: border-box;
   width: 100%;
   position: relative;
-  -webkit-animation: fromRight 1s ease;
-          animation: fromRight 1s ease; }
+  -webkit-animation: fromRight 3s ease-out;
+          animation: fromRight 3s ease-out; }
 
 @-webkit-keyframes fromRight {
   0% {
-    right: -1500px; }
-  10% {
-    right: -1350px; }
-  20% {
-    right: -1200px; }
-  30% {
-    right: -1050px; }
-  40% {
-    right: -900px; }
-  50% {
-    right: -750px; }
-  60% {
-    right: -600px; }
-  70% {
-    right: -450px; }
-  80% {
-    right: -300px; }
-  90% {
-    right: -150px; }
+    right: -100px;
+    opacity: 0; }
   100% {
-    right: 0; } }
+    right: 0;
+    opacity: 1; } }
 
 @keyframes fromRight {
   0% {
-    right: -1500px; }
-  10% {
-    right: -1350px; }
-  20% {
-    right: -1200px; }
-  30% {
-    right: -1050px; }
-  40% {
-    right: -900px; }
-  50% {
-    right: -750px; }
-  60% {
-    right: -600px; }
-  70% {
-    right: -450px; }
-  80% {
-    right: -300px; }
-  90% {
-    right: -150px; }
+    right: -100px;
+    opacity: 0; }
   100% {
-    right: 0; } }
+    right: 0;
+    opacity: 1; } }
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 .tracking__nav-item {
   font-family: BrandonGrotesque;
