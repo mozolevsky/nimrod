@@ -2,6 +2,7 @@
   display: flex;
   margin-bottom: 25px;
   align-items: stretch;
+  justify-content: space-between;
   background-color: $dark-grey-blue;
   @include transition();
   box-shadow: 12px 15px 11px 0 rgba(0, 0, 0, 0.12);
@@ -14,7 +15,7 @@
 }
 
 .tools__img {
-  width: 40%;
+  width: 178px; //width: 40%;
   height: 178px;
   overflow: hidden;
 }

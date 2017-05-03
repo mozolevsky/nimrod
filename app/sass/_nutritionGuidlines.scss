@@ -114,3 +114,10 @@
     margin-bottom: -25px;
   }
 }
+
+@media (min-width: 1600px) {
+  .transform__letter {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}

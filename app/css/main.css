@@ -371,6 +371,10 @@ header {
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #283c4b;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -384,7 +388,7 @@ header {
           box-shadow: 6px 10px 16px 0 rgba(0, 0, 0, 0.12); }
 
 .tools__img {
-  width: 40%;
+  width: 178px;
   height: 178px;
   overflow: hidden; }
 
@@ -1032,7 +1036,7 @@ header {
     -webkit-box-shadow: none;
             box-shadow: none; }
   .nutrition__top-img {
-    height: 212px; }
+    height: auto; }
   .nutrition__nav-wrapper {
     margin: 0 -32px; }
   .nutrition__tabs {
@@ -1182,6 +1186,11 @@ header {
   .transform__desc {
     margin: 0;
     margin-bottom: -25px; } }
+
+@media (min-width: 1600px) {
+  .transform__letter {
+    padding-left: 4%;
+    padding-right: 4%; } }
 
 .nutrition__tab-link_meals,
 .nutrition__tab-link_meals:hover {
