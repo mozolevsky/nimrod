@@ -193,6 +193,10 @@ $navigation-icons-active: (
   .navigation__link {
     @include brandonFont(bold, 10px, rgba(255, 255, 255, 0.35));
   }
+
+  .navigation__link::after {
+    top: 75px;
+  }
 }
 
 @media (max-width: $break-small) {

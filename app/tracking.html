@@ -95,7 +95,15 @@
     </div>
     <div class="tracking__sum row">
         <div class="tracking__sum-item col-md-6 col-sm-6 col-xs-6">
-            <span class="tracking__sum-amount tracking__sum-amount_fat">34<span class="tracking__sum-mark">%</span></span>
+            <div class="tracking__sum-wrap">
+                <button class="tracking__add tracking__sum-amount tracking__sum-amount-btn">Add</button>
+                <form>
+                    <label class="invisible">
+                        <input class="tracking__add_filled tracking__sum-amount tracking__sum-amount_fat" type="text">
+                        <span class="tracking__sum-mark">%</span>
+                    </label>
+                </form>
+            </div>
             <div class="tracking__sum-desc">
                 <div class="tracking__tooltip">
                     <span class="tracking__tooltip-control"> i</span>
@@ -112,7 +120,15 @@
             </div>
             </div>
             <div class="tracking__sum-item tracking__sum-item_weight col-md-6 col-sm-6 col-xs-6">
-                <span class="tracking__sum-amount tracking__sum-amount_weight">88<span class="tracking__sum-mark">lbs</span></span>
+                <div class="tracking__sum-wrap">
+                    <button class="tracking__add tracking__sum-amount tracking__sum-amount-btn">Add</button>
+                    <form>
+                        <label class="invisible">
+                            <input class="tracking__add_filled tracking__sum-amount tracking__sum-amount_weight" type="text">
+                            <span class="tracking__sum-mark">lbs</span>
+                        </label>
+                    </form>
+                </div>
                 <div class="tracking__sum-desc">
                     <div class="tracking__tooltip">
                         <span class="tracking__tooltip-control"> i</span>
@@ -297,7 +313,7 @@
 <script src="libs/jquery/dist/jquery.min.js"></script>
 <script src="libs/swiper/dist/js/swiper.min.js"></script>
 <script src="libs/dropzone/dropzone.js"></script>
-<script src="js/scripts.min.js"></script>
+<script src="js/scripts.js"></script>
 <script src="js/addMeasure.js"></script>
 
 <script>
