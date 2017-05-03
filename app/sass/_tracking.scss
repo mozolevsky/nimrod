@@ -254,29 +254,62 @@
   align-items: center;
 }
 
-.tracking__sum-amount {
+.tracking__sum-wrap {
+  margin-right: 20px;
+}
+
+.tracking__add.tracking__sum-amount {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-basis: 138px;
+  width: 138px;
   height: 138px;
   border-radius: 50%;
-  margin-right: 21px;
-  @include brandonFont(700, 60px, $white);
+  @include brandonFont(700, 56px, $white);
   vertical-align: top;
 }
 
-.tracking__sum-mark {
-  margin-bottom: 30px;
-  font-size: 20px;
+.tracking__sum-amount.tracking__sum-amount-btn {
+  font-size: 40px;
 }
 
-.tracking__sum-amount_fat {
+.tracking__add_filled.tracking__sum-amount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 138px;
+  height: 138px;
+  border-radius: 50%;
+  @include brandonFont(700, 54px, $white);
+  vertical-align: top;
+}
+
+.tracking__sum-amount.invisible {
+  display: none;
+}
+
+.tracking__sum-wrap label {
+  position: relative;
+}
+
+.tracking__sum-mark {
+  position: absolute;
+  top: 33px;
+  right: 12px;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+.tracking__add_filled.tracking__sum-amount_fat {
   background-color: #97df41;
 }
 
-.tracking__sum-amount_weight {
+.tracking__add_filled.tracking__sum-amount_weight {
   background-color: $aqua-marine;
+}
+
+.tracking__sum-amount.tracking__add_filled-text:hover {
+  width: 138px;
 }
 
 .tracking__sum-item_weight .tracking__tooltip {
@@ -364,7 +397,15 @@
   outline: none;
   background-size: 10px;
   background-position: 90% center;
+  color: $white;
+}
+
+.tracking__add_filled:focus {
   color: $cerulean-blue;
+  border: none;
+  border-bottom: 1px solid $cerulean-blue;
+  background-color: transparent;
+  border-radius: 0;
 }
 
 .tracking__add-label_filled {
@@ -963,6 +1004,10 @@
     background-color: $dodger-blue;
   }
 
+  .tracking__score .tracking__add_filled:focus {
+    background-color: transparent;
+  }
+
   .tracking__score .tracking__add {
     background-color: $white;
     color: $dodger-blue;
@@ -997,6 +1042,10 @@
     background-color: $lightish-purple;
   }
 
+  .tracking__measure .tracking__add_filled:focus {
+    background-color: transparent;
+  }
+
   .tracking__measure .tracking__add {
     background-color: $white;
     color: $lightish-purple;
@@ -1014,6 +1063,18 @@
     display: none;
   }
 
+}
+
+@media (max-width: 400px) {
+  .tracking__sum {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tracking__sum-item {
+    width: 100%;
+  }
 }
 
 
