@@ -182,51 +182,9 @@
                     knocking on the front doors of America, selling brushes, mops and cleaners?</p>
             </div>
             <div class="tracking__score-items col-md-8 col-sm-8">
-                <article class="tracking__score-item" v-on:click="open">
-                    <div class="tracking__score-block" hidden>
-                        <span class="tracking__score-number"></span>
-                        <i class="tracking__score-unit">sec</i>
-                        <div class="tracking__edit tracking__edit_score">Edit</div>
-                    </div>
-                    <h4 class="tracking__title">Plank Hold</h4>
-                    <button class="tracking__add tracking__add_score" >Add</button>
-                </article>
-                <article class="tracking__score-item" v-on:click="open">
-                    <div class="tracking__score-block" hidden>
-                        <span class="tracking__score-number"></span>
-                        <i class="tracking__score-unit">sec</i>
-                        <div class="tracking__edit tracking__edit_score">Edit</div>
-                    </div>
-                    <h4 class="tracking__title">Jump Squats</h4>
-                    <button class="tracking__add tracking__add_score">Add</button>
-                </article>
-                <article class="tracking__score-item" v-on:click="open">
-                    <div class="tracking__score-block" hidden>
-                        <span class="tracking__score-number"></span>
-                        <i class="tracking__score-unit">sec</i>
-                        <div class="tracking__edit tracking__edit_score">Edit</div>
-                    </div>
-                    <h4 class="tracking__title">Toe Taps</h4>
-                    <button class="tracking__add tracking__add_score">Add</button>
-                </article>
-                <article class="tracking__score-item" v-on:click="open">
-                    <div class="tracking__score-block" hidden>
-                        <span class="tracking__score-number"></span>
-                        <i class="tracking__score-unit">sec</i>
-                        <div class="tracking__edit tracking__edit_score">Edit</div>
-                    </div>
-                    <h4 class="tracking__title">Wall Sit</h4>
-                    <button class="tracking__add tracking__add_score">Add</button>
-                </article>
-                <article class="tracking__score-item" v-on:click="open">
-                    <div class="tracking__score-block" hidden>
-                        <span class="tracking__score-number"></span>
-                        <i class="tracking__score-unit">sec</i>
-                        <div class="tracking__edit tracking__edit_score">Edit</div>
-                    </div>
-                    <h4 class="tracking__title">Push Up Test</h4>
-                    <button class="tracking__add tracking__add_score">Add</button>
-                </article>
+                <template v-for="item in scoreBlocks">
+                    <score-wrapper v-on:click.native="open" v-bind:title-name="item.title"></score-wrapper>
+                </template>
             </div>
         </div>
         <div class="tracking__measure row">

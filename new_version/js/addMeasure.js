@@ -1,4 +1,29 @@
 
+Vue.component('score-wrapper', {
+    props: ['titleName'],
+    template: '<article class="tracking__score-item">' +
+    '<score-block></score-block>' +
+    '<score-title v-bind:content="titleName"></score-title>' +
+    '<score-button></score-button>' +
+    '</article>'
+});
+
+Vue.component('score-block', {
+    template: '<div class="tracking__score-block" hidden>' +
+                    '<span class="tracking__score-number"></span>' +
+                    '<i class="tracking__score-unit">sec</i>' +
+                    '<div class="tracking__edit tracking__edit_score">Edit</div>' +
+                '</div>'
+});
+
+Vue.component('score-title', {
+    template: '<h4 class="tracking__title">{{ content }}</h4>',
+    props: ['content']
+});
+
+Vue.component('score-button', {
+    template: '<button class="tracking__add tracking__add_score" >Add</button>'
+});
 
 var vm = new Vue({
     el: '#app',
@@ -6,7 +31,14 @@ var vm = new Vue({
         visible: false,
         currentBlock: '',
         message: '',
-        menuVisible: false
+        menuVisible: false,
+        scoreBlocks: [
+            { title: 'Plank Hold' },
+            { title: 'Jump Squats' },
+            { title: 'Toe Taps' },
+            { title: 'Wall Sit' },
+            { title: 'Push Up Test' }
+        ]
     },
     methods: {
         open: function (event) {
@@ -36,7 +68,7 @@ var vm = new Vue({
 
             this.close();
         },
-        passData: function(blockTitle, blockData) {
+        passData: function() {
             var formData = {
                 name: this.formName,
                 value: this.message
@@ -54,7 +86,7 @@ var vm = new Vue({
             this.menuVisible = false;
         }
     },
-        watch: {
+    watch: {
             message: function() {
                 var sendButton = document.querySelector('.motivation__popup-btn');
                 var input = document.querySelector('.motivation__popup-input');
