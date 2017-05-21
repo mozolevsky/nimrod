@@ -29,6 +29,14 @@ for (var i = 0; i < buttons.length; i++) {
         };
 
         elem.onblur = function () {
+            if (!isNaN(elem.value)) {
+                elem.classList.remove('tracking__add_filled-invalid');
+                elem.classList.add('tracking__add_filled-valid');
+            } else {
+                elem.classList.remove('tracking__add_filled-valid');
+                elem.classList.add('tracking__add_filled-invalid');
+            };
+
             if (elem.value && elem.classList.contains('tracking__add_filled-valid')) {
                 elem.classList.remove('tracking__add_filled-invalid');
                 elem.classList.remove('tracking__add_filled-valid');
