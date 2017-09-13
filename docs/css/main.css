@@ -3937,3 +3937,11 @@ button {
   top: 70%;
   left: 50%;
   margin-left: -70px; }
+
+.templates-list a {
+  display: block;
+  font-size: 20px;
+  line-height: 26px;
+  color:white;
+  text-decoration: underline;
+}
